@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class LikesControllerTest < ActionDispatch::IntegrationTest
@@ -5,5 +7,4 @@ class LikesControllerTest < ActionDispatch::IntegrationTest
     get likes_index_url
     assert_response :success
   end
-
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class DreamsControllerTest < ActionDispatch::IntegrationTest
@@ -5,5 +7,4 @@ class DreamsControllerTest < ActionDispatch::IntegrationTest
     get dreams_show_url
     assert_response :success
   end
-
 end

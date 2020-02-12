@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class PasswordResetsControllerTest < ActionDispatch::IntegrationTest
@@ -10,5 +12,4 @@ class PasswordResetsControllerTest < ActionDispatch::IntegrationTest
     get password_resets_edit_url
     assert_response :success
   end
-
 end
