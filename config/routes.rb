@@ -1,30 +1,21 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'users/show'
+  root 'staticpages#home'
+  get 'signup', to: 'users#new'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
-  get 'users/new'
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
-  get 'users/edit'
-
-  get 'users/following'
-
-  get 'users/followers'
-
-  get 'static_pages/home'
-
-  get 'sessions/new'
-
-  get 'password_resets/new'
-
-  get 'password_resets/edit'
-
-  get 'password_resets_controller/new'
-
-  get 'password_resets_controller/edit'
-
-  get 'dreams/show'
-
-  get 'likes/index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
+  resources :account_activations, only: [:edit]
+  resources :password_resets,     only: %i[new create edit update]
+  resources :dreams,              only: %i[create destroy]
+  resources :relationships,       only: %i[create destroy]
+  resources :likes,               only: %i[create destroy]
 end
