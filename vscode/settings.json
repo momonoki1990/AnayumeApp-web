@@ -1,0 +1,8 @@
+{
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "mbessey.vscode-rufo"
+  }
+}

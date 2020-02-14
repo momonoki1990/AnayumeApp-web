@@ -21,3 +21,6 @@ Style/StringLiterals:
 # "Line is too long"を無効
 Metrics/LineLength:
   Enabled: false
+
+inherit_gem:
+  rubocop-config-rufo: rubocop.yml

@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+      <%= link_to "AnayumeApp", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="ナビゲーション切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <%= link_to "ログイン", login_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "新規登録", signup_path, class: "nav-link" %>
+          </li>
+        </ul>                  
+      </div>
+    </div>        
+  </nav>
+</header>

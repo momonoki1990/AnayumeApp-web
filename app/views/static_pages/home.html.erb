@@ -1,2 +1,72 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">    
+      <%= form_for(:session, url: login_path) do |f| %>        
+        <div class="row mt-3 w-80">
+          <div class="col-5">
+            <div class="form-group">            
+              <%= f.label :email %>
+              <%= f.email_field :email, class: 'form-control' %>          
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="form-group">            
+              <%= f.label :password %>
+              <%= f.password_field :password, class: 'form-control' %>
+            </div>  
+          </div>
+          <div class="col-2 align-self-end">
+            <div class="form-group">        
+              <%= f.submit "ログイン", class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="message-area mt-5">
+        <h3>あなたの夢はなんですか？</h3>
+        <div class="text-box pl-5">
+          <p class="mt-5 lead">あなたの夢をことばに残そう</p>
+          <p class="mt-3 lead">みんなの夢を見てみよう</p>
+          <p class="mt-3 lead">夢を膨らませよう</p>
+        </div>
+      </div>
+      <div class="btn-area text-center mt-5">
+        <div class="form-group">
+          <%= form_for(:session, url: login_path) do |f| %>
+            <%= f.submit "新規登録", class: 'btn btn-primary w-50' %>
+            <%= f.submit "ログイン", class: 'btn btn-primary w-50 mt-2' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">    
+      <h4>投稿</h4>      
+        <div class="card">
+          <%= image_tag "/assets/NHM06uRh_400x400.jpg", alt: "", class: "img-top", width: "100px" %>
+          <div class="card_body">
+            <h5 class="card-title">Sample</h6>
+            <h6 class="card-subtitle">sub-title</h6>            
+            <p class="card-text">text</p>
+          </div>          
+      </div>
+      <div class="card">
+          <%= image_tag "/assets/NHM06uRh_400x400.jpg", alt: "", class: "img-top", width: "100px" %>
+          <div class="card_body">
+            <h5 class="card-title">Sample</h6>
+            <h6 class="card-subtitle">sub-title</h6>            
+            <p class="card-text">text</p>
+          </div>          
+      </div>
+      <div class="card">
+          <%= image_tag "/assets/NHM06uRh_400x400.jpg", alt: "", class: "img-top", width: "100px" %>
+          <div class="card_body">
+            <h5 class="card-title">Sample</h6>
+            <h6 class="card-subtitle">sub-title</h6>            
+            <p class="card-text">text</p>
+          </div>          
+      </div>
+    </div>
+  </div>
+</div>
