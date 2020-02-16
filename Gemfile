@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby '2.5.7'
+
 gem 'bcrypt',                  '3.1.12'
 gem 'bootstrap',               '4.4.1'
 gem 'bootstrap-will_paginate', '1.0.0'
