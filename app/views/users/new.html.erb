@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1 class="text-center">アカウントを作成</h1>
+<div class="row">
+<div class="mx-auto">
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :email, "メールアドレス" %>
+    <%= f.email_field :email, class: 'form-control' %>
+    
+    <%= f.label :password, "パスワード" %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation, "パスワード(確認)" %>
+    <%= f.password_field :password_field, class: 'form-control' %>
+
+    <%= f.submit "送信", class: "btn btn-primary" %>
+  <% end %>
+</div>
+</div>
