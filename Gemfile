@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.7'
+ruby '2.6.3'
 
 gem 'bcrypt',                  '3.1.12'
 gem 'bootstrap',               '4.4.1'
