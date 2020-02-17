@@ -20,9 +20,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                          email: "user@valid.com",
                          password: "foobar",
                          password_confirmation: "foobar" } }
+      end
     follow_redirect!
     assert_template 'users/show'
-    assert_not flash.empty?
-    end
+    assert is_logged_in?
     end  
 end

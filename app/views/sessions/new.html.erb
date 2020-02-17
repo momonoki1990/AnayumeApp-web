@@ -1,2 +1,21 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1 class="text-center">ログイン</h1>
+<div class="row">
+<div class="mx-auto">
+  <%= form_for(:session, url: login_path) do |f| %>
+    
+
+    <%= f.label :email, "メールアドレス" %>
+    <%= f.email_field :email, class: 'form-control' %>
+    
+    <%= f.label :password, "パスワード" %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation, "パスワード(確認)" %>
+    <%= f.password_field :password_field, class: 'form-control' %>
+
+    <%= f.submit "送信", class: "btn btn-primary" %>
+  <% end %>
+
+  <p>パスワードをお忘れですか？ <%= link_to "-アカウント作成", signup_path %></p>
+</div>
+</div>
