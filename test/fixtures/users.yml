@@ -1,2 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+naoya: 
+  name: naoya kumasegawa
+  email: naoya-kuma@hotmail.co.jp
+  password_digest: <%= User.digest('password') %>

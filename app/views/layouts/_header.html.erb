@@ -7,13 +7,22 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav">        
+        <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to "ログイン", login_path, class: "nav-link" %>
+            <%= link_to "ログアウト", logout_path, class: "nav-link" %>
           </li>
+          <li class="nav-item">
+            <%= link_to "マイページ", user_path(@current_user), class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">          
+            <%= link_to "ログイン", login_path, class: "nav-link" %>
+          </li>        
           <li class="nav-item">
             <%= link_to "新規登録", signup_path, class: "nav-link" %>
           </li>
+        <% end %>
         </ul>                  
       </div>
     </div>        
