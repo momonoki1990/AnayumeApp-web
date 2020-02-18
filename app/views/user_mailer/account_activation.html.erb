@@ -1,0 +1,9 @@
+<h1>AnayumeApp</h1> 
+
+
+<p>こんにちは、<%= @user.name %>さん</p>
+
+<p>AnayumeAppへようこそ！</p>
+
+<%= link_to "アカウントを有効にするためには、こちらのリンクをクリックしてください。",
+edit_account_activation_url(@user.activation_token, email: @user.email) %>

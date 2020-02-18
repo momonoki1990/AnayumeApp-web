@@ -1,0 +1,8 @@
+こんにちは、<%= @user.name %>さん 
+
+
+AnayumeAppへようこそ！
+
+アカウントを有効にするためには、こちらのリンクをクリックしてください。
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

@@ -21,8 +21,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     get edit_user_path(@user)
     log_in_as(@user)
     assert_redirected_to edit_user_url(@user)
-    name = "Sakura Satou"
-    email = "sakura@example.com"
+    name = "Kenta Kondou"
+    email = "kenta@example.com"
     patch user_path(@user), params: { user: { name: name,
                               email: email,
                               password: "",

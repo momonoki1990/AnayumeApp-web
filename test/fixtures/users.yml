@@ -4,8 +4,35 @@ naoya:
   name: Naoya Kumasegawa
   email: naoya@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated: <%= Time.zone.now%>
 
 tarou:
   name: Tarou Suzuki
   email: tarou@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated: <%= Time.zone.now%>
+
+sakura:
+  name: Sakura Satou
+  email: sakura@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated: <%= Time.zone.now%>
+
+kaede:
+  name: Kaede Kobayashi
+  email: kaede@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated: <%= Time.zone.now%>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name: <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+<% end %>
