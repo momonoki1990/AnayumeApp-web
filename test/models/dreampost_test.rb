@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class DreamTest < ActiveSupport::TestCase
+class DreampostTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
