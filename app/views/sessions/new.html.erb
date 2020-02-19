@@ -3,7 +3,6 @@
 <div class="mx-auto">
   <%= form_for(:session, url: login_path) do |f| %>
     
-
     <%= f.label :email, "メールアドレス" %>
     <%= f.email_field :email, class: 'form-control' %>
     
@@ -21,6 +20,6 @@
     <%= f.submit "送信", class: "btn btn-primary" %>
   <% end %>
 
-  <p>パスワードをお忘れですか？ <%= link_to "-アカウント作成", signup_path %></p>
+  <%= link_to "パスワードをお忘れですか？ ", new_password_reset_path %><%= link_to "-アカウント作成", signup_path %>
 </div>
 </div>
