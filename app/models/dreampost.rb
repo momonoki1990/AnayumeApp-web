@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Dream < ApplicationRecord
+class Dreamposts < ApplicationRecord
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
 
