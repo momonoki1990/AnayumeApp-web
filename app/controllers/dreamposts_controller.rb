@@ -8,7 +8,7 @@ class DreampostsController < ApplicationController
   end
 
   def create
-    @dreampost = current_user.dreamposts.build(dreampost_params)    
+    @dreampost = current_user.dreamposts.build(dreampost_params)
     if @dreampost.save
       flash[:success] = "投稿されました！"
       redirect_to root_url
