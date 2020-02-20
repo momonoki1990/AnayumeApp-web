@@ -1,2 +1,46 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+engineer:
+  content: "エンジニアになりたい。"
+  created_at: <%= 3.years.ago %>
+  user: naoaya
 
+novelist:
+  content: "小説を書きたい。"
+  created_at: <%= 10.minutes.ago %>
+  user: naoya
+
+novelist:
+  content: "大きな家に住みたい！"
+  created_at: <%= 2.hours.ago %>
+  user: naoya
+
+most_recent:
+  content: "幸せな家庭を築きたい。"
+  created_at: <%= Time.zone.now %>
+  user: naoya
+
+<% 30.times do |n| %>
+dreampost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: naoya
+<% end %>
+
+business:
+  content: "起業したい。"
+  created_at: <%= 3.days.ago %>
+  user: tarou
+
+cafe:
+  content: "カフェを開業したい。"
+  created_at: <%= 2.years.ago %>
+  user: sakura
+
+magican:
+  content: "プロのマジシャンになりたい。"
+  created_at: <%= 10.minutes.ago %>
+  user: kaede
+
+big:
+  content: "ビッグになりたい！"
+  created_at: <%= 4.hours.ago %>
+  user: kaede

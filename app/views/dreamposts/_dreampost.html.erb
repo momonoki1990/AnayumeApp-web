@@ -1,0 +1,14 @@
+<li id="dreampost-<%= dreampost.id %>">
+  <span class="user"><%= link_to dreampost.user.name, dreampost.user %></span>
+  <span class="content">
+    <%= dreampost.content %>
+    <%= image_tag dreampost.picture.url if dreampost.picture? %>
+  </span>
+  <span class="timestamp">
+    <%= dreampost.created_at %>に投稿
+    <% if current_user?(dreampost.user) %>
+      <%= link_to "削除する", dreampost, method: :delete,
+                                        data: { confirm: "削除してよろしいですか？" } %>
+    <% end %>
+  </span>
+</li>
