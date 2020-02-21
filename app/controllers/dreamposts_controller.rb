@@ -13,7 +13,7 @@ class DreampostsController < ApplicationController
       flash[:success] = "投稿されました！"
       redirect_to root_url
     else
-      @feed_items = Dreampost.all.paginate(page: params[:page])
+      @feed_items = current_user.feed.paginate(page: params[:page])
       render 'static_pages/home'
     end
   end
