@@ -83,4 +83,15 @@ class UserTest < ActiveSupport::TestCase
       @user.destroy
     end
   end
+
+  test "should follow and unfollow a user" do
+    naoya = users(:naoya)
+    tarou = users(:tarou)
+    assert_not naoya.following?(tarou)
+    naoya.follow(tarou)
+    assert naoya.following?(tarou)
+    assert tarou.followers.include?(naoya)
+    naoya.unfollow(tarou)
+    assert_not naoya.following?(tarou)
+  end  
 end
