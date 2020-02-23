@@ -3,11 +3,18 @@
   <div class="field">
   <%= f.text_area :content, placeholder: "投稿できます" %>
   </div>
-  <%= f.submit "送信", class: "btn btn-primary" %>
-  <span class="picture">
-    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+  <div class="space-between">
+  <span class="picture">　  
+    <label for="dreampost_picture">
+  　  <i class="far fa-image"></i>
+    </label>    
+    <%= f.file_field :picture, placeholder: '&#xf0a8',accept: 'image/jpeg,image/gif,image/png' %>    
+    <div class="clear"></div>    
   </span>
+  <%= f.submit "送信", class: "btn btn-primary" %>
+  </div> 
   <% end %>
+  
 
   <script type="text/javascript">
     $('#dreampost_picture').bind('change', function() {

@@ -1,14 +1,30 @@
-<li id="dreampost-<%= dreampost.id %>">
-  <span class="user"><%= link_to dreampost.user.name, dreampost.user %></span>
-  <span class="content">
-    <%= dreampost.content %>
-    <%= image_tag dreampost.picture.url if dreampost.picture? %>
-  </span>
-  <span class="timestamp">
-    <%= dreampost.created_at %>に投稿
-    <% if current_user?(dreampost.user) %>
-      <%= link_to "削除する", dreampost, method: :delete,
+<div id="dreampost-<%= dreampost.id %>" class="card">
+    <div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+    <div class="post-info">
+      <div>
+      <span class="user"><%= link_to dreampost.user.name, dreampost.user %></span>
+      <span class="timestamp">
+        <%= time_ago_in_words(dreampost.created_at) %>
+      </span>
+      </div>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton", data-toggle="dropdown">        
+        <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="dropdown-menu">
+        <% if current_user?(dreampost.user) %>
+        <%= link_to "削除する", dreampost, class: 'dropdown-item', method: :delete,
                                         data: { confirm: "削除してよろしいですか？" } %>
-    <% end %>
-  </span>
-</li>
+      <% end %>
+        </div>
+      </div>      
+    </div>    
+    <div class="card_body">            
+      <p class="card-text"><%= dreampost.content %></p>
+    </div>
+    <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+    </div>
+    </div>
+</div>

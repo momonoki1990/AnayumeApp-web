@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @mixin box_sizing {
   -mox-box-sizing: border-box;
@@ -14,3 +16,94 @@
   @include box_sizing;
 }
 
+* { @include box-sizing; }
+
+body {  
+  background: image-url('stars.jpg') repeat-y top center / auto;
+}
+
+header {
+  .navbar-brand { color: #fff; font-style: italic; font-size: 1.8rem; }
+  .navbar-toggler { border-color: #fff;}
+  .navbar-toggler-icon { color: #fff;}
+}
+
+.btn { border-radius: 1rem !important; }
+
+.w-80 { width: 80%; }
+
+/*プロフィール*/
+.prof-name { font-size: 1.4rem; color: #fff; }
+
+.user_info { margin-top: 3rem; }
+
+.new_dreampost { width: 80%; }
+
+textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-radius: 0.2rem; }
+
+.space-between { display: flex; justify-content: space-between; }
+
+.picture>input { display: none; }
+
+.picture>label { margin-bottom: 0; float: left; }
+
+.fa-image { color: #fff; float: left; }
+
+.fa-image::before { font-size: 2rem; }
+
+.clear { clear: both; }
+
+/*投稿一覧*/
+
+.col-md-6>h4 { color: #fff; }
+
+.dreamposts { list-style: none; }
+
+.card { padding: 5px 10px; margin-bottom: 5px; }
+
+.post-img { text-align: center; margin-bottom: 0; }
+
+.post-img>img { width: 100%; height: auto; border-radius: 5px;}
+
+.post-info { display: flex; justify-content: space-between; }
+
+.post-info>div { display: inline-block; }
+
+.dropdown-toggle { padding: 0; }
+
+.dropdown-toggle::after { display: none; }
+
+/*ログイン前home-left*/
+
+.easy-login>.col-5, .easy-login>.col-2 { padding-left: 0; color: #fff; }
+
+.easy-login>.col-2 { padding-bottom: 4px; }
+
+.message-area { color: #ffffff;}
+
+.message-area h3 { white-space: nowrap; }
+
+/*login/signupページ*/
+.login .w-75 { max-width: 430px; }
+
+.login .btn { float: right; }
+
+.form-check-input { margin-left: 0; }
+
+.form-check-input+span { margin-left: 1.25rem; }
+
+@media screen and (max-width: 767px) {
+  .mt { margin-top: 3rem; }
+  .field { text-align: center; }
+  .new_dreampost { width: 100%; }
+  /*ログイン前home*/
+  .easy-login { display: none; }
+  .mb-area { width: 100%; padding-left: 0 !important; } 
+  .message-area { text-align: center; }
+  .btn-area { text-align: center; }
+  .btn-area>.form-group>.btn { width: 75% !important; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .mb-area { width: 100%; padding-left: 0 !important; }  
+}
