@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      dreampost: 投稿
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+      dreampost:
+        content: 内容      
