@@ -1,0 +1,9 @@
+<a class="prof-img">
+  <% if @user.nil? %>
+    <%= image_tag 'NHM06uRh_400x400.jpg' %>
+  <% elsif @user.picture? %>
+    <%= image_tag @user.picture.url %>
+  <% else %>
+    <%= image_tag 'NHM06uRh_400x400.jpg' %>
+  <% end %>
+</a>

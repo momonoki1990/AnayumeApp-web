@@ -8,14 +8,14 @@
     <label for="dreampost_picture">
   　  <i class="far fa-image"></i>
     </label>    
-    <%= f.file_field :picture, placeholder: '&#xf0a8',accept: 'image/jpeg,image/gif,image/png' %>    
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>    
     <div class="clear"></div>    
   </span>
   <%= f.submit "送信", class: "btn btn-primary" %>
   </div> 
   <% end %>
   
-
+<!--ファイルサイズの監視と警告-->
   <script type="text/javascript">
     $('#dreampost_picture').bind('change', function() {
       var size_in_megabytes = this.files[0].size/1024/1024:

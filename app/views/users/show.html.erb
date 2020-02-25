@@ -1,8 +1,8 @@
 <div class="container text-white">
 <div class="row">
 <div class="col-md-6">
-<section class="user_info mt-5">
-  <h1 class="prof-name"><%= current_user.name %></h1>
+<section class="user-info mt-5 mb-2">
+  <%= render 'shared/user_info' %>
 </section>
 <section class="stats">
   <%= render 'shared/stats' %>
