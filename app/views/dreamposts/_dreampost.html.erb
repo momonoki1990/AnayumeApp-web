@@ -4,23 +4,26 @@
     <div class="col-10">
     <div class="post-info">
       <div>
-      <span class="user"><%= link_to dreampost.user.name, dreampost.user %></span>
-      <span class="timestamp">
-        <%= time_ago_in_words(dreampost.created_at) %>
-      </span>
+        <span class="user">
+          <%= link_to dreampost.user.name, dreampost.user %>
+        </span>
+        <span class="timestamp">
+          <%= time_ago_in_words(dreampost.created_at) %>
+        </span>
       </div>
+<% if current_user?(dreampost.user) %>
       <div class="dropdown">
         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton", data-toggle="dropdown">        
-        <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-down"></i>
         </button>
-        <div class="dropdown-menu">
-        <% if current_user?(dreampost.user) %>
-        <%= link_to "削除する", dreampost, class: 'dropdown-item', method: :delete,
+        <div class="dropdown-menu dropdown-menu-right">          
+            <%= link_to "削除する", dreampost, class: 'dropdown-item', method: :delete,
                                         data: { confirm: "削除してよろしいですか？" } %>
-      <% end %>
         </div>
-      </div>      
+      </div>
+<% end %>
     </div>    
+    
     <div class="card_body">            
       <p class="card-text"><%= dreampost.content %></p>
     </div>

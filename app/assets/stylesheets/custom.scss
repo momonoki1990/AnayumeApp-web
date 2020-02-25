@@ -32,10 +32,20 @@ header {
 
 .w-80 { width: 80%; }
 
-/*プロフィール*/
-.prof-name { font-size: 1.4rem; color: #fff; }
+.brsp { display: none; }
 
-.user_info { margin-top: 3rem; }
+/*flashメッセージ*/
+.alert { text-align: center; }
+
+/*エラーメッセージ*/
+#error_explanation {
+  .alert-danger { color: #ff3232; background-color: transparent; border-color: transparent; }
+  .alert { padding: 0 1.25rem; margin-bottom: 0; text-align: left; }
+  ul { margin-block-end: 0; }
+}
+
+/*プロフィール*/
+.prof-name { font-size: 1.4rem; margin-bottom: 0.1rem;}
 
 .new_dreampost { width: 80%; }
 
@@ -57,7 +67,7 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .col-md-6>h4 { color: #fff; }
 
-.dreamposts { list-style: none; }
+/*.dreamposts { list-style: none; }削除予定*/
 
 .card { padding: 5px 10px; margin-bottom: 5px; }
 
@@ -75,6 +85,11 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 /*ログイン前home-left*/
 
+.home .col-2 {
+  .form-group { margin-bottom: 0.75rem; }
+  .btn { padding: 0.5rem 0.45rem; }
+}
+
 .easy-login>.col-5, .easy-login>.col-2 { padding-left: 0; color: #fff; }
 
 .easy-login>.col-2 { padding-bottom: 4px; }
@@ -83,16 +98,24 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .message-area h3 { white-space: nowrap; }
 
-/*login/signupページ*/
-.login .w-75 { max-width: 430px; }
+/*login/signup/settingページ*/
+.signup .w-75, .setting .w-75, .login .w-75 { max-width: 430px; }
 
-.login .btn { float: right; }
+.signup .btn, .setting .btn { float: right; }
 
 .form-check-input { margin-left: 0; }
 
 .form-check-input+span { margin-left: 1.25rem; }
 
+/*ユーザー詳細ページ*/
+.new_relationship .btn, .edit_relationship .btn { margin-top: 0.5rem; }
+
+/*フォロー・フォロワー一覧*/
+
+
 @media screen and (max-width: 767px) {
+  .brpc { display: none; }
+  .brsp { display: block; }
   .mt { margin-top: 3rem; }
   .field { text-align: center; }
   .new_dreampost { width: 100%; }

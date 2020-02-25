@@ -1,21 +1,21 @@
-<div class="container">
+<div class="container text-white show-follow">
 <div class="row">
-<div class="col-md-4">
-<section class="user_info">
-<h1><%= @user.name %></h1>
+<div class="col-md-6">
+<section class="user_info mt-5">
+<h1 class="prof-name"><%= @user.name %></h1>
 </section>
 <section class="stats">
 <%= render 'shared/stats' %>
 </section>
-</div>
-<div class="col-md-8">
 <%= render 'follow_form' if logged_in? %>
-<h3><%= @title %></h3>
+</div>
+<div class="col-md-6 mt">
+<h4><%= @title %></h4>
 <% if @users.any? %>
-<ul class="dreamposts">
+<div>
 <%= render @users %>
-</ul>
-<%= will_paginate @dreamposts %>
+</div>
+<%= will_paginate @users %>
 <% end %>
 </div>
 </div>
