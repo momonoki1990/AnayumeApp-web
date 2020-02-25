@@ -1,21 +1,18 @@
-<div class="container">
+<div class="container text-white">
 <div class="row">
-<div class="col-md-4">
-<section class="user_info">
-  <%= render 'shared/user_info' %>
+<div class="col-md-6">
+<section class="user_info mt-5">
+  <h1 class="prof-name"><%= current_user.name %></h1>
 </section>
 <section class="stats">
   <%= render 'shared/stats' %>
 </section>
-</div>
-<div class="col-md-8">
 <%= render 'follow_form' if logged_in? %>
-<% if @user.dreamposts.any? %>
-<h3>投稿(<%= @user.dreamposts.count %>)</h3>
-<ol class="dreamposts">
-<%= render @dreamposts %>
-</ol>
-<%= will_paginate @dreamposts %>
+</div>
+<div class="col-md-6 mt">
+<% if @feed_items.any? %>
+<h4>投稿(<%= @feed_items.count %>)</h4>
+<%= render 'shared/feed' %>
 <% end %>
 </div>
 </div>

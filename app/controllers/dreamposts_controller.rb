@@ -9,12 +9,11 @@ class DreampostsController < ApplicationController
 
   def create
     @dreampost = current_user.dreamposts.build(dreampost_params)
-    if @dreampost.save
-      flash[:success] = "投稿されました！"
+    if @dreampost.save      
       redirect_to root_url
     else
       @feed_items = current_user.feed.paginate(page: params[:page])
-      render 'static_pages/home'      
+      render 'static_pages/home'
     end
   end
 

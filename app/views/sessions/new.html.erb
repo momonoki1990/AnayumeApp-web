@@ -1,7 +1,7 @@
-<div class="container text-white signup">
+<div class="container text-white login">
 <h1 class="text-center">ログイン</h1>
 <div class="row">
-<div class="mx-auto">
+<div class="mx-auto w-75">
   <%= form_for(:session, url: login_path) do |f| %>
     
     <%= f.label :email, "メールアドレス", class: 'mt-3' %>
@@ -23,7 +23,11 @@
     </div>
   <% end %>
 
-  <%= link_to "パスワードをお忘れですか？ ", new_password_reset_path %><%= link_to "-アカウント作成", signup_path %>
+  <p>
+  <%= link_to "パスワードをお忘れですか？ ", new_password_reset_path %>
+  <br class="brsp">
+  <%= link_to "-アカウント作成", signup_path %>
+  </p>
 </div>
 </div>
 </div>
