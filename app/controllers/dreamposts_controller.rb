@@ -9,7 +9,8 @@ class DreampostsController < ApplicationController
 
   def create
     @dreampost = current_user.dreamposts.build(dreampost_params)
-    if @dreampost.save      
+    @user = current_user
+    if @dreampost.save
       redirect_to root_url
     else
       @feed_items = current_user.feed.paginate(page: params[:page])

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200220030929) do
+ActiveRecord::Schema.define(version: 20200225044054) do
 
   create_table "dreamposts", force: :cascade do |t|
     t.text "content"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20200220030929) do
     t.datetime "reset_sent_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

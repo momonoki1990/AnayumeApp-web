@@ -45,9 +45,10 @@ header {
 }
 
 /*プロフィール*/
-.prof-name { font-size: 1.4rem; margin-bottom: 0.1rem;}
 
-.new_dreampost { width: 80%; }
+.prof-img img { display: inline-block; width: 100%; height: auto; border-radius: 50%; }
+
+.new_dreampost { max-width: 450px; }
 
 textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-radius: 0.2rem; }
 
@@ -67,9 +68,13 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .col-md-6>h4 { color: #fff; }
 
+
+
 /*.dreamposts { list-style: none; }削除予定*/
 
 .card { padding: 5px 10px; margin-bottom: 5px; }
+
+.card-body { color: #000; padding: 0;}
 
 .post-img { text-align: center; margin-bottom: 0; }
 

@@ -1,6 +1,8 @@
 <div id="dreampost-<%= dreampost.id %>" class="card">
     <div class="row">
-    <div class="col-2"></div>
+    <div class="col-2 pt-1 pr-0">
+      <%= render 'shared/prof_img' %>
+    </div>
     <div class="col-10">
     <div class="post-info">
       <div>
@@ -24,7 +26,7 @@
 <% end %>
     </div>    
     
-    <div class="card_body">            
+    <div class="card-body">            
       <p class="card-text"><%= dreampost.content %></p>
     </div>
     <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
