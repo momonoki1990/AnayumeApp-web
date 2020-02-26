@@ -1,0 +1,18 @@
+<% if !current_user?(dreampost.user) %>
+  <span class="like">
+    <% if dreampost.like?(current_user) %>
+      <%= form_for(dreampost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
+        <%= button_tag(class: "btn btn-default btn-xs") do %>
+          <i class="fas fa-heart my-pink"> <%= dreampost.likes_count %></i>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= form_for(dreampost.likes.build, remote: true) do |f| %>
+        <div><%= hidden_field_tag :dreampost_id, dreampost.id %></div>
+        <%= button_tag(class: "btn btn-default btn-xs") do %>
+          <i class="far fa-heart"> <%= dreampost.likes_count %></i>
+        <% end %>
+      <% end %>
+     <% end %>    
+  </span>
+<% end %>

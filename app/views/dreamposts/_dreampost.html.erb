@@ -30,6 +30,7 @@
       <p class="card-text"><%= dreampost.content %></p>
     </div>
     <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+    <%= render 'likes/like', dreampost: dreampost %>
     </div>
     </div>
 </div>
