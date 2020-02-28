@@ -14,6 +14,7 @@ class DreampostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = current_user.feed.paginate(page: params[:page])
+      flash[:danger] = "内容を入力してください。"
       render 'static_pages/home'
     end
   end
