@@ -1,0 +1,33 @@
+<% if logged_in? %>
+<%= form_for(@dreampost) do |f| %>  
+  <%= render 'shared/error_messages', object: f.object %>  
+  <div class="field">
+    <%= f.hidden_field :in_reply_to, value: dreampost.id %>
+    <%= f.text_area :content, placeholder: "返信を投稿" %>
+  </div>
+  <div class="space-between">
+  <span class="picture">　  
+    <label for="dreampost_picture">
+  　  <i class="far fa-image"></i>
+    </label>    
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>    
+    <div class="clear"></div>    
+  </span>
+  <%= f.submit "送信", class: "btn btn-primary" %>
+  </div> 
+  <% end %>
+  <% else %>
+　　<div>
+     <p class="reply-form-blank">ログインしてください。</p>
+   </div>
+<% end %>
+  
+<!--ファイルサイズの監視と警告-->
+  <script type="text/javascript">
+    $('#dreampost_picture').bind('change', function() {
+      var size_in_megabytes = this.files[0].size/1024/1024:
+      if (size_in_megabytes > 5) {
+        alert('ファイルのサイズは5MBまでです。小さなファイルをご選択ください。');
+      }
+    });
+  </script>

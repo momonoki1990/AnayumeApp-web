@@ -1,4 +1,3 @@
-<% if !current_user?(dreampost.user) %>
   <span class="like">
     <% if dreampost.like?(current_user) %>
       <%= form_for(dreampost.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
@@ -13,6 +12,5 @@
           <i class="far fa-heart"> <%= dreampost.likes_count %></i>
         <% end %>
       <% end %>
-     <% end %>    
+     <% end %>     
   </span>
-<% end %>

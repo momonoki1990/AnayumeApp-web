@@ -1,0 +1,7 @@
+<a class="prof-img">
+  <% if Dreampost.find_by(id: dreampost.in_reply_to).user.picture? %>
+    <%= image_tag Dreampost.find_by(id: dreampost.in_reply_to).user.picture.url %>
+  <% else %>
+    <%= image_tag 'NHM06uRh_400x400.jpg' %>
+  <% end %>
+</a>

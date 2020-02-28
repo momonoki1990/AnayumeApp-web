@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200226062700) do
+ActiveRecord::Schema.define(version: 20200227052729) do
 
   create_table "dreamposts", force: :cascade do |t|
     t.text "content"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20200226062700) do
     t.datetime "updated_at", null: false
     t.string "picture"
     t.integer "likes_count", default: 0, null: false
+    t.integer "in_reply_to", default: 0, null: false
     t.index ["user_id", "created_at"], name: "index_dreamposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_dreamposts_on_user_id"
   end

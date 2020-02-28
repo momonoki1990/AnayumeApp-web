@@ -6,7 +6,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @feed_items = @user.dreamposts.paginate(page: params[:page])    
+    @feed_items = @user.dreamposts.paginate(page: params[:page])
+    @dreampost = current_user.dreamposts.build if logged_in?
   end
 
   def new

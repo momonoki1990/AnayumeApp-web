@@ -36,6 +36,8 @@ header {
 
 .my-pink { color: #E0395F; }
 
+.modal { color: #000 }
+
 /*flashメッセージ*/
 .alert { text-align: center; }
 
@@ -70,13 +72,9 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .col-md-6>h4 { color: #fff; }
 
+.card { color: #000; padding: 5px 10px; margin-bottom: 5px; }
 
-
-/*.dreamposts { list-style: none; }削除予定*/
-
-.card { padding: 5px 10px; margin-bottom: 5px; }
-
-.card-body { color: #000; padding: 0;}
+.card-body { padding: 0;}
 
 .post-img { text-align: center; margin-bottom: 0; }
 
@@ -89,6 +87,13 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 .dropdown-toggle { padding: 0; }
 
 .dropdown-toggle::after { display: none; }
+
+.reply .reply-from .reply-form-blank { border: 1px solid #000; height: calc( 1.3rem * 4); line-height: 1.3rem; border-radius: 0.2rem; color: #757575 }
+
+.like form { display: inline-block; }
+
+/*reply, likeボタンのpadding*/
+/*.reply .btn, .like .btn { padding: 0.25rem 0.5rem } */
 
 /*ログイン前home-left*/
 

@@ -1,7 +1,7 @@
 <div id="dreampost-<%= dreampost.id %>" class="card">
     <div class="row">
     <div class="col-2 pt-1 pr-0">
-      <%= render 'shared/prof_img' %>
+      <%= render 'shared/dreampost_user_img', dreampost: dreampost %>      
     </div>
     <div class="col-10">
     <div class="post-info">
@@ -27,9 +27,13 @@
     </div>    
     
     <div class="card-body">            
-      <p class="card-text"><%= dreampost.content %></p>
+      <div class="card-text">
+        <%= render 'dreamposts/reply_info', dreampost: dreampost %>
+        <%= dreampost.content %>
+      </div>
     </div>
     <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+    <%= render 'dreamposts/reply', dreampost: dreampost %>
     <%= render 'likes/like', dreampost: dreampost %>
     </div>
     </div>

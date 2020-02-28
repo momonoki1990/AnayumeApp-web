@@ -8,7 +8,7 @@ class DreampostsController < ApplicationController
   end
 
   def create
-    @dreampost = current_user.dreamposts.build(dreampost_params)
+    @dreampost = current_user.dreamposts.build(dreampost_params)    
     @user = current_user
     if @dreampost.save
       redirect_to root_url
@@ -27,7 +27,7 @@ class DreampostsController < ApplicationController
   private
   
     def dreampost_params
-      params.require(:dreampost).permit(:content, :picture)
+      params.require(:dreampost).permit(:content, :picture, :in_reply_to)
     end
 
     def correct_user
