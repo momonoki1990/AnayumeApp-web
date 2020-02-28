@@ -1,0 +1,30 @@
+<span class="reply">
+  <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#reply-modal-<%= dreampost.id %>">  
+    <i class="far fa-comment"></i>
+  </button>
+  <div class="modal" id="reply-modal-<%= dreampost.id %>" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">    
+          <p class="modal-title" id="exampleModalLabel">
+          </p>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">        
+          <section class="reply_to">
+            <%= render 'dreamposts/reply_to', dreampost: dreampost %>
+          </section>
+
+          <section class="reply-from">
+            <%= render 'dreamposts/reply_from', dreampost: dreampost %>
+          </section>
+
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</span>

@@ -1,0 +1,22 @@
+    <div class="row">
+    <div class="col-2 pt-1 pr-0">    
+      <%= render 'shared/thread_reply_to_user_img', dreampost: dreampost %>
+    </div>
+    <div class="col-10">
+    <div class="post-info">
+      <div>
+        <span class="user">
+          <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
+                      Dreampost.find_by(id: dreampost.in_reply_to).user %>          
+        </span>
+        <span class="timestamp">
+          <%= time_ago_in_words(dreampost.created_at) %>
+        </span>
+      </div>
+    </div>        
+    
+      <p><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></p>
+    
+    </div>
+    </div>
+
