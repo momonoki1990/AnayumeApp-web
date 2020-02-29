@@ -1,5 +1,5 @@
 <% if logged_in? %>
-<%= form_for(@dreampost) do |f| %>    
+<%= form_for(@dreampost) do |f| %>
   <div class="field">
     <%= f.hidden_field :in_reply_to, value: dreampost.id %>
     <%= f.text_area :content, placeholder: "返信を投稿" %>
