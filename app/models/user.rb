@@ -24,6 +24,7 @@ class User < ApplicationRecord
   has_secure_password
   mount_uploader :picture, PictureUploader
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  validates :profile, length: { maximum: 160 }
 
 class << self
 

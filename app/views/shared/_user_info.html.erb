@@ -2,7 +2,15 @@
 <div class="col-4 pr-0">
 <%= render 'shared/prof_img' %>
 </div>
-<div class="col-8 pl-0">
-<span class="prof-name h4"><%= @user.name %></span>
+<div class="col-8">
+<div class="prof-name h4">
+  <%= @user.name %>
+</div>
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
+<section class="follow-form">
+  <%= render 'users/follow_form' if logged_in? %>
+</section>
 </div>
 </div>

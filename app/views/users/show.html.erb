@@ -4,10 +4,10 @@
 <section class="user-info mt-5 mb-2">
   <%= render 'shared/user_info' %>
 </section>
-<section class="stats">
-  <%= render 'shared/stats' %>
+<section class="user-profile">
+  <%= render 'shared/user_profile' %>
 </section>
-<%= render 'follow_form' if logged_in? %>
+
 </div>
 <div class="col-md-6 mt">
 <% if @feed_items.any? %>

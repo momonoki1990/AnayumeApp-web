@@ -121,7 +121,11 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .form-check-input+span { margin-left: 1.25rem; }
 
+textarea.form-control { width: 100%; height: calc( 1.3rem * 7); line-height: 1.3rem; border-radius: 0.2rem; }
+
 /*ユーザー詳細ページ*/
+.user-profile div { padding: 0.5rem 1rem; }
+
 .new_relationship .btn, .edit_relationship .btn { margin-top: 0.5rem; }
 
 /*フォロー・フォロワー一覧*/
