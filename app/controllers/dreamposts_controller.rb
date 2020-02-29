@@ -9,7 +9,7 @@ class DreampostsController < ApplicationController
 
   def create
     @dreampost = current_user.dreamposts.build(dreampost_params)    
-    @user = current_user
+    @user = current_user    
     if @dreampost.save
       redirect_to root_url
     else
