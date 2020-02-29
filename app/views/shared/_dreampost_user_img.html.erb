@@ -1,4 +1,4 @@
-<a class="prof-img">
+<a href="<%= user_path(dreampost.user.id) %>" class="prof-img">
   <% if dreampost.user.picture? %>
     <%= image_tag dreampost.user.picture.url %>
   <% else %>
