@@ -8,12 +8,12 @@ class DreampostsController < ApplicationController
   end
 
   def create
-    @dreampost = current_user.dreamposts.build(dreampost_params)    
-    @user = current_user    
+    @dreampost = current_user.dreamposts.build(dreampost_params)
+    @user = current_user
     if @dreampost.save
       redirect_to root_url
     else
-      @feed_items = current_user.feed.paginate(page: params[:page])
+      @feed_items = current_user.feed.page(params[:page]).per(10)
       flash[:danger] = "内容を入力してください。"
       render 'static_pages/home'
     end

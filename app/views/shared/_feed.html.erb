@@ -1,4 +1,4 @@
-  <div class="dreamposts">
+  <div class="dreamposts jscroll">
     <%= render @feed_items %>
+    <%= paginate @feed_items %>
   </div>
-  <%= will_paginate @feed_items %>

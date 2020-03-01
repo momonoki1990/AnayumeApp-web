@@ -102,6 +102,8 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 
 .like .btn:hover { background-color: #FFCCE5; color: #FF65B2; border-radius: 50%!important; line-height: 1; }
 
+nav.pagination { display: none; }
+
 /*reply, likeボタンのpadding*/
 /*.reply .btn, .like .btn { padding: 0.25rem 0.5rem } */
 
