@@ -1,4 +1,5 @@
 <div id="dreampost-<%= dreampost.id %>" class="card">
+<a href="#" class="dreampost-show stretched-link"></a>
     <div class="row">
     <div class="col-2 pt-1 pr-0">
       <%= render 'shared/dreampost_user_img', dreampost: dreampost %>      
@@ -7,7 +8,7 @@
     <div class="post-info">
       <div>
         <span class="user">
-          <%= link_to dreampost.user.name, dreampost.user %>
+          <%= link_to dreampost.user.name, dreampost.user, class: 'z-2' %>
         </span>
         <span class="timestamp">
           <%= time_ago_in_words(dreampost.created_at) %>
@@ -15,7 +16,7 @@
       </div>
 <% if current_user?(dreampost.user) %>
       <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton", data-toggle="dropdown">        
+        <button class="btn dropdown-toggle z-2" type="button" id="dropdownMenuButton", data-toggle="dropdown">        
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="dropdown-menu dropdown-menu-right">          
@@ -28,6 +29,7 @@
     
     <div class="card-body">            
       <div class="card-text">
+        <%= render 'dreamposts/normal_thread', dreampost: dreampost %>
         <%= render 'dreamposts/reply_info', dreampost: dreampost %>
         <%= dreampost.content %>
       </div>

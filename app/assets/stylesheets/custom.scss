@@ -32,6 +32,8 @@ header {
 
 .w-80 { width: 80%; }
 
+.z-2 { position: relative; z-index: 2 }
+
 .brsp { display: none; }
 
 .my-pink { color: #E0395F; }
@@ -51,6 +53,8 @@ header {
 /*プロフィール*/
 
 .prof-img img { display: inline-block; width: 100%; height: auto; border-radius: 50%; }
+
+.prof-img img:hover { filter: brightness(80%); transition-duration: 0.1s }
 
 .new_dreampost { max-width: 450px; }
 
@@ -93,6 +97,10 @@ textarea { width: 100%; height: calc( 1.3rem * 4); line-height: 1.3rem; border-r
 .reply .reply-from .fa-image { color: #424242 }
 
 .like form { display: inline-block; }
+
+.reply .btn:hover { background-color: #CCE5FF; color: #65B2FF; border-radius: 50%!important; line-height: 1; }
+
+.like .btn:hover { background-color: #FFCCE5; color: #FF65B2; border-radius: 50%!important; line-height: 1; }
 
 /*reply, likeボタンのpadding*/
 /*.reply .btn, .like .btn { padding: 0.25rem 0.5rem } */

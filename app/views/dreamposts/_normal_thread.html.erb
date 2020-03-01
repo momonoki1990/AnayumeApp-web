@@ -1,8 +1,8 @@
-<span class="reply-thread">
-  <a href="#" data-toggle="modal" data-target="#reply-thread-<%= dreampost.id %>", class="stretched-link">  
-    スレッドを表示
+<% if dreampost.in_reply_to == 0 %>
+<span class="normal-thread">
+  <a href="#" data-toggle="modal" data-target="#normal-thread-<%= dreampost.id %>", class="stretched-link">    
   </a>
-  <div class="modal" id="reply-thread-<%= dreampost.id %>" tabindex="-1">
+  <div class="modal" id="normal-thread-<%= dreampost.id %>" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">    
@@ -12,20 +12,13 @@
             <span>&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <section class="thread-reply-to">
-            <%= render 'dreamposts/thread_reply_to', dreampost: dreampost %>
-          </section>
+        <div class="modal-body">          
           <section class="thread-reply-from">
             <%= render 'dreamposts/reply_to', dreampost: dreampost %>
           </section>
-
-          
-
-
-        </div>
-        
+        </div>        
       </div>
     </div>
   </div>
 </span>
+<% end %>

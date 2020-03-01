@@ -1,4 +1,5 @@
-<a href="<%= user_path(@user.id) %>"class="prof-img">
+<% if logged_in? %>
+<a href="<%= user_path(@user.id) %>" class="prof-img">
   <% if @user.nil? %>
     <%= image_tag 'NHM06uRh_400x400.jpg' %>    
   <% elsif @user.picture? %>
@@ -7,3 +8,8 @@
     <%= image_tag 'NHM06uRh_400x400.jpg' %>
   <% end %>
 </a>
+<% else %>
+  <a class="prof-img">
+    <%= image_tag 'NHM06uRh_400x400.jpg' %>
+  </a>
+<% end %>
