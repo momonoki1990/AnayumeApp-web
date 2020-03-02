@@ -29,6 +29,7 @@ class DreampostsController < ApplicationController
     @feed_items = Dreampost.search(params[:dreampost][:search]).page(params[:page]).per(10)
     @user = current_user
     @dreampost = current_user.dreamposts.build if logged_in?
+    render 'static_pages/home'
   end
 
   private
