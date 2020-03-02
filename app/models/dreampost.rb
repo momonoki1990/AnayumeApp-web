@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Dreampost < ApplicationRecord
+  attr_accessor :search
   belongs_to :user
   has_many :likes, dependent: :destroy
   has_many :like_users, through: :likes, source: :user
@@ -21,6 +22,15 @@ class Dreampost < ApplicationRecord
   def like?(user)
     like_users.include?(user)
   end
+
+  class << self
+
+    def search(search)      
+      return Dreampost.all unless search
+      Dreampost.where(['content LIKE ?', "%#{search}%"])
+    end
+  end
+
 
 private
   def picture_size

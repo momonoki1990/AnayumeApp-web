@@ -25,6 +25,12 @@ class DreampostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
+  def search
+    @feed_items = Dreampost.search(params[:dreampost][:search]).page(params[:page]).per(10)
+    @user = current_user
+    @dreampost = current_user.dreamposts.build if logged_in?
+  end
+
   private
   
     def dreampost_params
