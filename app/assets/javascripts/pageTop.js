@@ -15,6 +15,8 @@ $(function() {
         return false;
     });
 
+    $.cookie("test", 'テストです');
+
     if($.cookie("access")){
         $('#first').css({display:'none'});
     }
