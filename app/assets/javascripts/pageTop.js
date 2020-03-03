@@ -1,4 +1,4 @@
-jQuery(function() {
+$(function() {
     var pagetop = $('#page_top');   
     pagetop.hide();
     $(window).scroll(function () {
@@ -14,4 +14,15 @@ jQuery(function() {
         }, 500); //0.5秒かけてトップへ移動
         return false;
     });
+});
+
+
+
+$(function(){
+    if($.cookie("access")){
+        $('#first').css({display:'none'});
+    }
+    $(window).load(function(){
+        $.cookie("access",$('body').addClass('access'));
+    })
 });
