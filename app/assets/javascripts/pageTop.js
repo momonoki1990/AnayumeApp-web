@@ -20,7 +20,7 @@ $(function() {
     if($.cookie("access")){
         $('#first').css({display:'none'});
     }
-    $(window).load(function(){
+    
         $.cookie("access",$('body').addClass('access'));
-    })
+    
 });
