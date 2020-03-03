@@ -1,4 +1,5 @@
 <%= form_for(@dreampost) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
   <%= f.text_area :content, placeholder: "投稿できます" %>
   </div>

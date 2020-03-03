@@ -11,7 +11,6 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     get user_path(@user)
     assert_template 'users/show'
     assert_select 'span', text: @user.name
-    # assert_match @user.microposts.count.to_s, response.body
-    assert_select 'div.pagination'
+    assert_match @user.dreamposts.count.to_s, response.body
   end
 end

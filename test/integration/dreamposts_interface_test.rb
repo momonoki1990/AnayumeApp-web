@@ -4,12 +4,11 @@ class DreampostsInterfaceTest < ActionDispatch::IntegrationTest
   
   def setup
     @user = users(:naoya)
+    log_in_as(@user)
   end
 
-  test "dreampost interface" do
-    log_in_as(@user)
+  test "dreamposts interface" do    
     get root_path
-    assert_select 'div.pagination'
     assert_select 'input[type=file]'
     assert_no_difference 'Dreampost.count' do
       post dreamposts_path, params: { dreampost: { content: "" } }
@@ -26,9 +25,9 @@ class DreampostsInterfaceTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_match content, response.body
     assert_select 'a', text: '削除する'
-    first_dreampost = @user.dreamposts.paginate(page: 1).first
+    first_dreampost = @user.dreamposts.page(1).first
     assert_difference 'Dreampost.count', -1 do
-      delete dreampost_path(first_dreampost)      
+      delete dreampost_path(first_dreampost)
     end
     get user_path(users(:tarou))
     assert_select 'a', text: 'delete', count: 0

@@ -1,14 +1,14 @@
 engineer:
   content: "エンジニアになりたい。"
   created_at: <%= 3.years.ago %>
-  user: naoaya
+  user: naoya
 
 novelist:
   content: "小説を書きたい。"
   created_at: <%= 10.minutes.ago %>
   user: naoya
 
-novelist:
+house:
   content: "大きな家に住みたい！"
   created_at: <%= 2.hours.ago %>
   user: naoya

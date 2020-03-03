@@ -13,7 +13,7 @@
 <div class="col-md-6 mt">
 <% if @feed_items.any? %>
   <div class="d-flex justify-content-between mb-2">
-    <h4>投稿(<%= @feed_items.count %>)</h4>
+    <h4>投稿(<%= @user.dreamposts.count %>)</h4>
     <%= render 'shared/search_form'%>
   </div>
   <%= render 'shared/feed' %>
