@@ -14,6 +14,7 @@ class DreampostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = current_user.feed.page(params[:page]).per(10)
+      flash.now[:danger] = @dreampost.errors.full_messages.to_sentence
       render 'static_pages/home'
     end
   end

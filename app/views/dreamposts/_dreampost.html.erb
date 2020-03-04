@@ -1,9 +1,9 @@
-<div id="dreampost-<%= dreampost.id %>" class="card">
+<div id="dreampost-<%= dreampost.id %>" class="card position-relative">
     <div class="row">
     <div class="col-2 pt-1 pr-0">
       <%= render 'shared/dreampost_user_img', dreampost: dreampost %>      
     </div>
-    <div class="col-10">
+    <div class="col-10 position-static">
     <div class="post-info">
       <div>
         <span class="user">
@@ -30,7 +30,7 @@
       <div class="card-text">
         <%= render 'dreamposts/normal_thread', dreampost: dreampost %>
         <%= render 'dreamposts/reply_info', dreampost: dreampost %>
-        <%= dreampost.content %>
+        <span class="z-2"><%= dreampost.content %></span>
       </div>
     </div>
     <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
