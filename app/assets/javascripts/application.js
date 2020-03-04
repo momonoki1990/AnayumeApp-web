@@ -14,7 +14,6 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery.jscroll.min.js
-//= require jquery.cookie.js
 //= require popper
 //= require bootstrap-sprockets
 //= require_tree .

@@ -15,12 +15,10 @@ $(function() {
         return false;
     });
 
-    $.cookie("test", 'テストです');
-
-    if($.cookie("access")){
+    //初回アクセス時(セッション毎)のみ表示
+    if(sessionStorage.getItem('key')){
         $('#first').css({display:'none'});
     }
-    
-        $.cookie("access",$('body').addClass('access'));
-    
+    add_access = $('body').addClass('access')
+    window.sessionStorage.setItem('key', add_access);
 });
