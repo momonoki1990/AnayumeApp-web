@@ -14,8 +14,8 @@
       </div>
     </div>        
     
-      <p class="mb-0"><%= dreampost.content %></p>
-    　<p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+      <span class="mb-0"><%= dreampost.content %></span>
+    　<p class="post-img"><%= image_tag dreampost.picture.url, class: 'mb-3' if dreampost.picture? %></p>
     </div>
     </div>
 

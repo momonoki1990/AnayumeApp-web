@@ -15,7 +15,7 @@
       </div>
     </div>        
     
-      <p class="mb-0"><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></p>
+      <span class="mb-0"><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></span>
     　 <p class="post-img mb-3"><%= image_tag Dreampost.find_by(id: dreampost.in_reply_to).picture.url if Dreampost.find_by(id: dreampost.in_reply_to).picture? %></p>
     </div>
     </div>
