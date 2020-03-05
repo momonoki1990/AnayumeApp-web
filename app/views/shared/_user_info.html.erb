@@ -3,8 +3,8 @@
 <%= render 'shared/prof_img' %>
 </div>
 <div class="col-7 offset-1">
-<div class="prof-name h4">
-  <%= @user.name %>
+<div class="prof-name h4">  
+  <%= link_to @user.name, @user, class: 'link-white' %>
 </div>
 <section class="stats">
   <%= render 'shared/stats' %>
