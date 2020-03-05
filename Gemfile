@@ -20,7 +20,6 @@ gem 'rails',                   '5.1.6'
 gem 'rails-i18n',              '~> 5.1'
 gem 'sass-rails',              '5.0.6'
 gem 'turbolinks',              '5.0.1'
-
 gem 'uglifier',                '3.2.0'
 
 group :development, :test do

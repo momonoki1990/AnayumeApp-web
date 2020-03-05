@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require jquery3
+//= require turbolinks
 //= require jquery.jscroll.min.js
 //= require popper
 //= require bootstrap-sprockets

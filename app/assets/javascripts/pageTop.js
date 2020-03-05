@@ -1,5 +1,5 @@
-$(function() {
-    var pagetop = $('#page_top');   
+$(document).on('turbolinks:load', function()  {
+    var pagetop = $('#page_top');    
     pagetop.hide();
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
@@ -13,7 +13,5 @@ $(function() {
             scrollTop: 0
         }, 500); //0.5秒かけてトップへ移動
         return false;
-    });
-
-    
+    });    
 });
