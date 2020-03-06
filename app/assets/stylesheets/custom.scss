@@ -46,6 +46,8 @@ header {
 
 .link-white:hover { color: #fff; }
 
+.fa-image { cursor: pointer; }
+
 /*homeページのアニメーション*/
 .start { background: #000; position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 9000;}
 .start p { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none; z-index: 9999; color: #fff; }
@@ -60,13 +62,11 @@ header {
 
 /*エラーメッセージ*/
 #error_explanation {
-  .alert-danger { color: #ff3232; background-color: transparent; border-color: transparent; }
-  .alert { padding: 0 1.25rem; margin-bottom: 0; text-align: left; }
+  .alert-danger { color: #ff3232; background-color: transparent; border-color: transparent; padding: 0 1.25rem; text-align: left; }
   ul { margin-block-end: 0; }
 }
 
 /*プロフィール*/
-
 .prof-img img { display: inline-block; width: 100%; height: auto; border-radius: 50%; }
 
 .prof-img img:hover { filter: brightness(80%); transition-duration: 0.1s }
@@ -139,16 +139,32 @@ nav.pagination { display: none; }
 
 .message-area h3 { white-space: nowrap; }
 
+/*ログイン後home-left*/
+.dreampost-textarea { width: 100%; height: auto; background-color: #fff; color: #000; border-radius: 0.2rem; }
+
+.dreampost-textarea textarea { border: 0px; resize: none; outline: none; }
+
+.dreampost-image { height: auto!important; min-height: 0px!important; }
+
+.dreampost-image>img {max-width: 80%; height: auto; border-radius: 10px; padding: 0.5rem 0;}
+
 /*login/signup/settingページ*/
 .signup .w-75, .setting .w-75, .login .w-75 { max-width: 430px; }
-
-.signup .btn, .setting .btn { float: right; }
 
 .form-check-input { margin-left: 0; }
 
 .form-check-input+span { margin-left: 1.25rem; }
 
 textarea.form-control { width: 100%; height: calc( 1.3rem * 7); line-height: 1.3rem; border-radius: 0.2rem; }
+
+.user-image { width: 50%; height: auto; border-radius: 50%; }
+
+.user-image:hover { filter: brightness(80%); transition-duration: 0.1s; cursor: pointer;}
+
+.user-image a { pointer-events: none; }
+
+.user-image img {width: 100%; height: auto; border-radius: 50%; }
+
 
 /*ユーザー詳細ページ*/
 .user-profile div { padding: 0.5rem 1rem; }

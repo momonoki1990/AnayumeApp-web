@@ -1,8 +1,11 @@
 <%= form_for(@dreampost) do |f| %>  
   <div class="field">
-  <%= f.text_area :content, placeholder: "投稿できます" %>
+  <div class="dreampost-textarea">
+    <%= f.text_area :content, placeholder: "投稿できます" %>    
+    <div id="result" class="dreampost-image text-center"></div>
   </div>
-  <div class="space-between">
+  </div>
+  <div class="space-between mt-1">
   <span class="picture">　  
     <label for="dreampost_picture">
   　  <i class="far fa-image"></i>
@@ -11,15 +14,33 @@
     <div class="clear"></div>    
   </span>
   <%= f.submit "送信", class: "btn btn-primary" %>
-  </div> 
+  </div>
   <% end %>
-  
+
+
+
 <!--ファイルサイズの監視と警告-->
-  <script type="text/javascript">
-    $('#dreampost_picture').bind('change', function() {
-      var size_in_megabytes = this.files[0].size/1024/1024:
-      if (size_in_megabytes > 5) {
-        alert('ファイルのサイズは5MBまでです。小さなファイルをご選択ください。');
-      }
+<script type="text/javascript">
+  $('#dreampost_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('ファイルのサイズは5MBまでです。小さなファイルをご選択ください。');
+    }
+  });
+</script>
+
+<script>
+$(function(){
+    $('#dreampost_picture').change(function(){        
+        var file = $(this).prop('files')[0];
+        if(!file.type.match('image.*')){
+            return;
+        }
+        var fileReader = new FileReader();
+        fileReader.onloadend = function() {
+            $('#result').html('<img src="' + fileReader.result + '"/>');
+        }
+        fileReader.readAsDataURL(file);
     });
-  </script>
+});
+</script>
