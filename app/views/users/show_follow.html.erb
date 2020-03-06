@@ -1,6 +1,7 @@
 <div class="container text-white show-follow">
 <div class="row">
 <div class="col-md-6">
+<div class="sticky">
 <section class="user_info mt-5">
 <%= link_to @user.name, @user, class: 'h3 link-white' %>
 </section>
@@ -8,6 +9,7 @@
 <%= render 'shared/stats' %>
 </section>
 <%= render 'follow_form' if logged_in? %>
+</div>
 </div>
 <div class="col-md-6 mt">
 <h4><%= @title %></h4>
