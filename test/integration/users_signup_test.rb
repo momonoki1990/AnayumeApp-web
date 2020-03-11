@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
-
   def setup
     ActionMailer::Base.deliveries.clear
   end
@@ -10,9 +9,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     get signup_path
     assert_no_difference 'User.count' do
       post users_path, params: { user: { name: "",
-                         email: "user@invalid.com",
-                         password: "foo",
-                         password_confirmation: "bar" } }
+                                         email: "user@invalid.com",
+                                         password: "foo",
+                                         password_confirmation: "bar" } }
     end
     assert_template 'users/new'
     assert_select 'div#error_explanation'
@@ -23,9 +22,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     get signup_path
     assert_difference 'User.count' do
       post users_path, params: { user: { name: "user",
-                         email: "user@valid.com",
-                         password: "foobar",
-                         password_confirmation: "foobar" } }
+                                         email: "user@valid.com",
+                                         password: "foobar",
+                                         password_confirmation: "foobar" } }
     end
     assert_equal 1, ActionMailer::Base.deliveries.size
     user = assigns(:user)
@@ -41,5 +40,5 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template 'users/show'
     assert is_logged_in?
-  end  
+  end
 end

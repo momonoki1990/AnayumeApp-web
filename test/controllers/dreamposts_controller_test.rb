@@ -25,7 +25,7 @@ class DreampostsControllerTest < ActionDispatch::IntegrationTest
     log_in_as(users(:naoya))
     dreampost = dreamposts(:big)
     assert_no_difference 'Dreampost.count' do
-      delete dreampost_path(dreampost)      
+      delete dreampost_path(dreampost)
     end
     assert_redirected_to root_url
   end

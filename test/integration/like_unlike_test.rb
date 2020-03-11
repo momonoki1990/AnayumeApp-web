@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class LikeUnlikeTest < ActionDispatch::IntegrationTest
-  
   def setup
     @user = users(:naoya)
     @dreampost = dreamposts(:business)
@@ -9,8 +8,8 @@ class LikeUnlikeTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
   end
 
-  test "likes interface" do    
-    get root_path    
+  test "likes interface" do
+    get root_path
     assert_not @dreampost.likes.empty?
     assert_match @dreampost.likes.count.to_s, response.body
     delete like_path(likes(:one))
@@ -28,7 +27,7 @@ class LikeUnlikeTest < ActionDispatch::IntegrationTest
 
   test "should like a dreampost with Ajax" do
     assert_difference '@other_dreampost.likes.count', 1 do
-      post likes_path, xhr: true, params: { dreampost_id: @other_dreampost.id }      
+      post likes_path, xhr: true, params: { dreampost_id: @other_dreampost.id }
     end
   end
 

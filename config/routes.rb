@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   get 'search', to: 'dreamposts#search'
-  
+
   # リロード時のエラー対応
   get 'users', to: 'users#new'
   get 'dreamposts', to: 'static_pages#home'

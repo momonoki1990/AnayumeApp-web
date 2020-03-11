@@ -3,10 +3,9 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  
   def setup
     @user = User.new(name: "Example User", email: "user@example.com",
-              password: "foobar", password_confirmation: "foobar")
+                     password: "foobar", password_confirmation: "foobar")
   end
 
   test "should be valid" do
@@ -38,8 +37,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should reject invalid addresses" do
-    invalid_addresses = %w[useruser sample.foo baz@foo ......@.......
-                           ]
+    invalid_addresses = %w[useruser sample.foo baz@foo ......@.......]
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
       assert_not @user.valid?, "#{invalid_address.inspect} should be invalid"
@@ -93,5 +91,5 @@ class UserTest < ActiveSupport::TestCase
     assert tarou.followers.include?(naoya)
     naoya.unfollow(tarou)
     assert_not naoya.following?(tarou)
-  end  
+  end
 end

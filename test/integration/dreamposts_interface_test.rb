@@ -1,19 +1,18 @@
 require 'test_helper'
 
 class DreampostsInterfaceTest < ActionDispatch::IntegrationTest
-  
   def setup
     @user = users(:naoya)
     log_in_as(@user)
   end
 
-  test "dreamposts interface" do    
+  test "dreamposts interface" do
     get root_path
     assert_select 'input[type=file]'
     assert_no_difference 'Dreampost.count' do
       post dreamposts_path, params: { dreampost: { content: "" } }
     end
-    assert_select 'div#error_explanation'
+    assert_select 'div.alert-danger'
     content = "ポートフォリオ作成中！"
     picture = fixture_file_upload('test/fixtures/cat1.jpg', 'images/jpg')
     assert_difference 'Dreampost.count', 1 do

@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserMailerTest < ActionMailer::TestCase
-
   test "account_activation" do
     user = users(:naoya)
     user.activation_token = User.new_token

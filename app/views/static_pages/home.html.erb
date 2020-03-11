@@ -1,22 +1,21 @@
 <div class="container text-white home">
   <div class="row">
     <div class="col-md-6">
-    <div class="sticky">
-      <% if logged_in? %>
-        <%= render 'static_pages/after_logged_in_home' %>
-      <% else %>
-        <%= render 'static_pages/before_logged_in_home' %>
-      <% end %>
+      <div class="sticky">
+        <% if logged_in? %>
+        <%= render "static_pages/after_logged_in_home" %>
+        <% else %>
+        <%= render "static_pages/before_logged_in_home" %>
+        <% end %>
+      </div>
     </div>
-    </div>    
     <div class="col-md-6 mt">
       <div class="d-flex justify-content-between mb-2">
         <h4>投稿</h4>
-        <%= render 'shared/search_form'%>
+        <%= render "shared/search_form" %> 　　　
       </div>
-      <%= render 'shared/feed' %>
-    </div>    
+      <%= render "shared/feed" %>
+    </div>
   </div>
 </div>
-
-<%= render 'static_pages/top' %>
+<%= render "static_pages/top" %>

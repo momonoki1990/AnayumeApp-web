@@ -3,7 +3,6 @@
 require 'test_helper'
 
 class LikeTest < ActiveSupport::TestCase
-  
   def setup
     @like = Like.new(user_id: users(:naoya).id,
                      dreampost_id: dreamposts(:cafe).id)

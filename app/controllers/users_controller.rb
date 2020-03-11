@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :update, :following, :followers]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_user, only: %i[edit update following followers]
+  before_action :correct_user, only: %i[edit update]
 
   def show
     @user = User.find(params[:id])
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       flash[:info] = "送信されたメールをご確認ください。"
       redirect_to root_url
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       flash[:success] = "設定が変更されました"
       redirect_to @user
     else
-      render 'edit'
+      render "edit"
     end
   end
 
@@ -43,25 +43,25 @@ class UsersController < ApplicationController
     @title = "フォロー中"
     @user = User.find(params[:id])
     @users = @user.following.page(params[:page]).per(20)
-    render 'show_follow'
+    render "show_follow"
   end
 
   def followers
     @title = "フォロワー"
     @user = User.find(params[:id])
     @users = @user.followers.page(params[:page]).per(20)
-    render 'show_follow'
+    render "show_follow"
   end
 
   private
-    
-    def user_params
-      params.require(:user).permit(:name, :email, :password,
-                      :password_confirmation, :picture, :profile)
-    end    
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
+  def user_params
+    params.require(:user).permit(:name, :email, :password,
+                                 :password_confirmation, :picture, :profile)
+  end
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to(root_url) unless current_user?(@user)
+  end
 end

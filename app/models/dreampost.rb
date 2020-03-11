@@ -24,18 +24,16 @@ class Dreampost < ApplicationRecord
   end
 
   class << self
-
-    def search(search)      
+    def search(search)
       return Dreampost.all unless search
+
       Dreampost.where(['content LIKE ?', "%#{search}%"])
     end
   end
 
+  private
 
-private
   def picture_size
-    if picture.size > 5.megabytes
-      errors.add(:pictre, "ファイルのサイズは5MB以下にしてください。")
-    end
+    errors.add(:pictre, "ファイルのサイズは5MB以下にしてください。") if picture.size > 5.megabytes
   end
 end

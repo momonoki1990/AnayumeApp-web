@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UsersLoginTest < ActionDispatch::IntegrationTest
-  
   def setup
     @user = users(:naoya)
   end
@@ -15,11 +14,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     get root_path
     assert flash.empty?
   end
-  
+
   test "login with valid information followed by logout" do
     get login_path
     post login_path, params: { session: { email: @user.email,
-                           password: 'password'} }
+                                          password: 'password' } }
     assert is_logged_in?
     assert_redirected_to root_url
     follow_redirect!
@@ -35,7 +34,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", signup_path
-    assert_select "a[href=?]", logout_path, count: 0    
+    assert_select "a[href=?]", logout_path, count: 0
   end
 
   test "login with remembering" do
@@ -47,7 +46,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     log_in_as(@user, remember_me: '1')
     delete logout_path
     log_in_as(@user, remember_me: '0')
-    #ここでcookies['remember_token']が更新されてしまっている
+    # ここでcookies['remember_token']が更新されてしまっている
     #=log_in_asメソッドが問題？
     assert_empty cookies['remember_token']
   end

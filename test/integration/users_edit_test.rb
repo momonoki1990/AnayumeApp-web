@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UsersEditTest < ActionDispatch::IntegrationTest
-
   def setup
     @user = users(:naoya)
   end
@@ -11,9 +10,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     get edit_user_path(@user)
     assert_template 'users/edit'
     patch user_path(@user), params: { user: { name: "",
-                             email: "foo@invalid",
-                             password: "foo",
-                             password_confirmation: "bar" } }
+                                              email: "foo@invalid",
+                                              password: "foo",
+                                              password_confirmation: "bar" } }
     assert_template 'users/edit'
   end
 
@@ -25,10 +24,10 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     email = "kenta@example.com"
     picture = fixture_file_upload('test/fixtures/cat1.jpg', 'images/jpg')
     patch user_path(@user), params: { user: { name: name,
-                              email: email,
-                              password: "",
-                              password_confirmation: "",
-                              picture: picture } }
+                                              email: email,
+                                              password: "",
+                                              password_confirmation: "",
+                                              picture: picture } }
     assert_not flash.empty?
     assert_redirected_to @user
     assert assigns(:user).picture?

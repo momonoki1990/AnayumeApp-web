@@ -9,11 +9,11 @@ gem 'bootstrap',               '4.4.1'
 gem 'carrierwave',             '1.2.2'
 gem 'coffee-rails',            '4.2.2'
 gem 'counter_culture',         '~> 1.8'
-gem 'kaminari'
 gem 'faker',                   '1.7.3'
 gem 'font-awesome-sass',       '~> 5.4.1'
 gem 'jbuilder',                '2.7.0'
 gem 'jquery-rails',            '4.3.1'
+gem 'kaminari'
 gem 'mini_magick',             '4.7.0'
 gem 'puma',                    '3.9.1'
 gem 'rails',                   '5.1.6'
@@ -30,7 +30,8 @@ end
 group :development do
   gem 'listen', '3.1.5'
   gem 'rubocop', require: false
-  gem 'rubocop-config-rufo'
+  gem 'rubocop-rails', require: false
+  gem 'solargraph'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'
   gem 'web-console',           '3.5.1'

@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 class DreampostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: %i[create destroy]
   before_action :correct_user, only: :destroy
-  
-  def show
-  end
+
+  def show; end
 
   def create
     @dreampost = current_user.dreamposts.build(dreampost_params)
@@ -33,14 +32,13 @@ class DreampostsController < ApplicationController
   end
 
   private
-  
-    def dreampost_params
-      params.require(:dreampost).permit(:content, :picture, :in_reply_to)
-    end
 
-    def correct_user
-      @dreampost = current_user.dreamposts.find_by(id: params[:id])
-      redirect_to root_url if @dreampost.nil?
-    end
+  def dreampost_params
+    params.require(:dreampost).permit(:content, :picture, :in_reply_to)
+  end
 
+  def correct_user
+    @dreampost = current_user.dreamposts.find_by(id: params[:id])
+    redirect_to root_url if @dreampost.nil?
+  end
 end
