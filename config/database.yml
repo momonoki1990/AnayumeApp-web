@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: AnayumeAppDB
+  pool: 5
+  username: <%= Rails.application.secrets.postgresql_username %>
+  password: <%= Rails.application.secrets.postgresql_password %>
+  host: <%= Rails.application.secrets.postgresql_host %>
+  port: 5432
