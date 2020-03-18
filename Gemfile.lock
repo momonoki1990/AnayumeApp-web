@@ -231,7 +231,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (3.2.3)
+    fog-vsphere (3.2.5)
       fog-core
       rbvmomi (>= 1.9, < 3)
     fog-xenserver (1.0.0)
