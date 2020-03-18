@@ -25,7 +25,7 @@ production:
   encoding: unicode
   database: AnayumeAppDB
   pool: 5
-  username: <%= Rails.application.secrets.postgresql_username %>
-  password: <%= Rails.application.secrets.postgresql_password %>
-  host: <%= Rails.application.secrets.postgresql_host %>
+  username: <%= ENV["POSTGRESQL_USERNAME"] %>
+  password: <%= ENV["POSTGRESQL_PASSWORD"] %>
+  host: <%= ENV["POSTGRESQL_HOST"] %>
   port: 5432
