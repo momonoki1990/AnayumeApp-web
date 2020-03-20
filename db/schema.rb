@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 20200229062401) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "dreamposts", force: :cascade do |t|
     t.text "content"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -25,8 +28,8 @@ ActiveRecord::Schema.define(version: 20200229062401) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "dreampost_id"
+    t.bigint "user_id"
+    t.bigint "dreampost_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dreampost_id"], name: "index_likes_on_dreampost_id"
@@ -63,4 +66,7 @@ ActiveRecord::Schema.define(version: 20200229062401) do
     t.index ["profile"], name: "index_users_on_profile"
   end
 
+  add_foreign_key "dreamposts", "users"
+  add_foreign_key "likes", "dreamposts"
+  add_foreign_key "likes", "users"
 end
