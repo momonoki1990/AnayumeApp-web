@@ -1,0 +1,24 @@
+version: "2"
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: AnayumeAppDB_development
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD:
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "3306:3306"
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    tty: true
+    stdin_open: true
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/workdir
