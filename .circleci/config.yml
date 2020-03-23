@@ -37,7 +37,7 @@ jobs: # ステップの集合
           command: bundle install
           
       - run:
-          name:rm -rf ~/.gem
+          name: rm -rf ~/.gem
           command: rm -rf ~/.gem
 
       # Ruby の依存関係のバンドルキャッシュを保存します
