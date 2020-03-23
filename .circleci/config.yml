@@ -21,9 +21,9 @@ jobs: # ステップの集合
 
       # Bundler のバージョンを指定します
 
-      - run:
-          name: Bundler を指定
-          command: bundle -v
+      #- run:
+      #    name: Bundler を指定
+      #    command: bundle -v
 
       # バンドルキャッシュを復元します
       # 依存関係キャッシュについては https://circleci.com/docs/ja/2.0/caching/ をお読みください
