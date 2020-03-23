@@ -68,6 +68,10 @@ jobs: # ステップの集合
       - run:
           name: データベースをセットアップ
           command: bin/rails db:schema:load --trace
+          
+      - run:
+          name: rails test
+          command: bundle exec rails test
 
       #- run:
       #    name: RSpec を並列実行
