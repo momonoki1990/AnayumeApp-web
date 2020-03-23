@@ -9,7 +9,7 @@ jobs: # ステップの集合
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           PGHOST: 127.0.0.1
-          PGUSER: circleci-demo-ruby
+          PGUSER: myuser
           RAILS_ENV: test
       - image: circleci/postgres:9.5-alpine # データベースイメージ
         environment: # データベースの環境変数
