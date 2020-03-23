@@ -65,9 +65,9 @@ jobs: # ステップの集合
           name: DB を待機
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
-      #- run:
-      #    name: データベースをセットアップ
-      #    command: bin/rails db:schema:load --trace
+      - run:
+          name: データベースをセットアップ
+          command: bin/rails db:schema:load --trace
 
       #- run:
       #    name: RSpec を並列実行
