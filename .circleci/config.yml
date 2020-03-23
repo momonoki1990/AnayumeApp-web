@@ -19,13 +19,15 @@ jobs: # ステップの集合
     steps: # 実行可能コマンドの集合
       - checkout # ソースコードを作業ディレクトリにチェックアウトする特別なステップ
 
+      - run:
+          name: bundle update
+          command: bundle update --bundler
+      
       # Bundler のバージョンを指定します
 
       - run:
           name: Bundler を指定
-          command: |
-          bundle update --bundler
-          bundle -v
+          command: bundle -v                
 
       # バンドルキャッシュを復元します
       # 依存関係キャッシュについては https://circleci.com/docs/ja/2.0/caching/ をお読みください
