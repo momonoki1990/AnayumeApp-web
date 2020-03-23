@@ -9,14 +9,13 @@ jobs: # ステップの集合
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           PGHOST: 127.0.0.1
-          PGUSER: postgres
+          PGUSER: myuser
           RAILS_ENV: test
       - image: circleci/postgres:9.5-alpine # データベースイメージ
         environment: # データベースの環境変数
-          POSTGRES_USER: postgres
+          POSTGRES_USER: myuser
           POSTGRES_DB: AnayumeAppDB_test
-          POSTGRES_PASSWORD: password
-          POSTGRES_HOST_AUTH_METHOD: trust
+          POSTGRES_PASSWORD: ""
     steps: # 実行可能コマンドの集合
       - checkout # ソースコードを作業ディレクトリにチェックアウトする特別なステップ
 
