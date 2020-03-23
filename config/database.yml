@@ -9,6 +9,7 @@ default: &default
 
 development:
   <<: *default
+  host: localhost
   database: AnayumeAppDB_development
 
 # Warning: The database defined as "test" will be erased and
