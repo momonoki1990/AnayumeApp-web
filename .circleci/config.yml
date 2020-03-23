@@ -16,6 +16,7 @@ jobs: # ステップの集合
           POSTGRES_USER: myuser
           POSTGRES_DB: AnayumeAppDB_test
           POSTGRES_PASSWORD: ""
+          POSTGRES_HOST_AUTH_METHOD: trust
     steps: # 実行可能コマンドの集合
       - checkout # ソースコードを作業ディレクトリにチェックアウトする特別なステップ
 
