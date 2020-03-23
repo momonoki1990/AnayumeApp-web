@@ -33,9 +33,9 @@ jobs: # ステップの集合
             - rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
             - rails-demo-bundle-v2-
 
-      - run: # Ruby の依存関係をインストールします
-          name: バンドルインストール
-          command: bundle check || bundle install
+      #- run: # Ruby の依存関係をインストールします
+      #    name: バンドルインストール
+      #    command: bundle check || bundle install
 
       # Ruby の依存関係のバンドルキャッシュを保存します
 
