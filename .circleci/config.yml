@@ -18,13 +18,8 @@ jobs: # ステップの集合
           POSTGRES_PASSWORD: ""
     steps: # 実行可能コマンドの集合
       - checkout # ソースコードを作業ディレクトリにチェックアウトする特別なステップ
-
-      - run:
-          name: bundle update
-          command: bundle update --bundler
       
       # Bundler のバージョンを指定します
-
       - run:
           name: Bundler を指定
           command: bundle -v                
