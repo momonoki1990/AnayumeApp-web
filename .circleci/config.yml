@@ -75,7 +75,7 @@ jobs: # ステップの集合
           
       - run:
           name: rails test
-          command: bundle exec rails test
+          command: bin/rails test
 
       #- run:
       #    name: RSpec を並列実行
