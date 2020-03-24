@@ -33,7 +33,7 @@ jobs: # ステップの集合
 
       - run: # Ruby の依存関係をインストールします
           name: bundle install
-          command: bundle install --path vendor/bundle
+          command: bundle install --path vendor/bundle && bundle exec rails test 
 
       # Ruby の依存関係のバンドルキャッシュを保存します
 
