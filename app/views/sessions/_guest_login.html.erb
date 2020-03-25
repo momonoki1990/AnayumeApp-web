@@ -1,6 +1,5 @@
-
-    <%= form_for(:session, url: login_path, method: :post) do |f| %>
-        <%= f.hidden_field :email, value: 'example@example.com' %>
-        <%= f.hidden_field :password, value: 'sample' %>
-        <%= f.submit 'おためしログイン', class:'btn btn-primary w-100 mt-2' %>
-    <% end %>
+<%= form_for(:session, url: login_path, method: :post) do |f| %>
+<%= f.hidden_field :email, value: 'example@example.com' %>
+<%= f.hidden_field :password, value: 'sample' %>
+<%= f.submit 'おためしログイン', class:'btn btn-primary w-80 mt-2' %>
+<% end %>

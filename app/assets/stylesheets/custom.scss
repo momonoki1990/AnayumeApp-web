@@ -48,6 +48,27 @@ header {
   border-radius: 1rem !important;
 }
 
+.btn-primary {
+  background-color: rgba(0, 105, 217, 0.6);
+  border: #0069d9 1px solid;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 105, 217, 1)
+}
+
+.btn-outline-success {
+  background-color: rgba(0, 0, 0, 0);
+  border: #28a745 1px solid;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: rgba(40, 167, 69, 0.6);
+  border: #28a745 1px solid;
+  color: #fff;
+}
+
 .w-80 {
   width: 80%;
 }
@@ -106,6 +127,11 @@ header {
   display: none;
   z-index: 9999;
   color: #fff;
+}
+
+/*検索窓*/
+.search .form-control {
+  width: 11rem;
 }
 
 /*スクロールトップボタン*/
@@ -298,7 +324,7 @@ nav.pagination {
   }
 }
 
-.easy-login>.col-5,
+/*.easy-login>.col-5,
 .easy-login>.col-2 {
   padding-left: 0;
   color: #fff;
@@ -306,7 +332,7 @@ nav.pagination {
 
 .easy-login>.col-2 {
   padding-bottom: 4px;
-}
+}*/
 
 .message-area {
   color: #ffffff;
@@ -346,7 +372,8 @@ nav.pagination {
 /*login/signup/settingページ*/
 .signup .w-75,
 .setting .w-75,
-.login .w-75 {
+.login .w-75,
+.password_reset .w-75 {
   max-width: 430px;
 }
 

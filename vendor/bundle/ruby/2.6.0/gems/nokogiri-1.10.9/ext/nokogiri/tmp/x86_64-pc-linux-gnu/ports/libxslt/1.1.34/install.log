@@ -1,0 +1,317 @@
+Making install in libxslt
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libxslt.la '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+libtool: install: /usr/bin/install -c .libs/libxslt.lai /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.la
+libtool: install: /usr/bin/install -c .libs/libxslt.a /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.a
+libtool: install: chmod 644 /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.a
+libtool: install: ranlib /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt.a
+libtool: finish: PATH="/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/bin:/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make  install-exec-hook
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+/bin/mkdir -p "/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libxslt-plugins"
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man3'
+ /usr/bin/install -c -m 644 libxslt.3 '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man3'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libxslt'
+ /usr/bin/install -c -m 644 xsltconfig.h '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libxslt'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libxslt'
+ /usr/bin/install -c -m 644 xslt.h xsltutils.h pattern.h templates.h variables.h keys.h numbersInternals.h extensions.h extra.h functions.h namespaces.h imports.h attributes.h documents.h preproc.h transform.h security.h xsltInternals.h xsltexports.h xsltlocale.h '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libxslt'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libxslt'
+Making install in libexslt
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libexslt'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libexslt'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libexslt.la '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+libtool: install: /usr/bin/install -c .libs/libexslt.lai /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.la
+libtool: install: /usr/bin/install -c .libs/libexslt.a /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.a
+libtool: install: chmod 644 /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.a
+libtool: install: ranlib /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/libexslt.a
+libtool: finish: PATH="/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxml2/2.9.10/bin:/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the '-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to '/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libexslt'
+ /usr/bin/install -c -m 644 exslt.h exsltexports.h '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libexslt'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man3'
+ /usr/bin/install -c -m 644 libexslt.3 '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man3'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libexslt'
+ /usr/bin/install -c -m 644 exsltconfig.h '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/include/libexslt'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libexslt'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/libexslt'
+Making install in xsltproc
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/xsltproc'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/xsltproc'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c xsltproc '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/bin'
+libtool: install: /usr/bin/install -c xsltproc /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/bin/xsltproc
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/xsltproc'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/xsltproc'
+Making install in doc
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/doc'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+/bin/mkdir -p /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html
+/usr/bin/install -c -m 0644 ./*.html /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html
+/usr/bin/install -c -m 0644 ./*.gif /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html
+/bin/mkdir -p /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/html
+/usr/bin/install -c -m 0644 ./html/*.html /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/html
+/usr/bin/install -c -m 0644 ./html/*.png /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/html
+/bin/mkdir -p /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/EXSLT
+/usr/bin/install -c -m 0644 ./EXSLT/*.html /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/EXSLT
+/bin/mkdir -p /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/tutorial
+/usr/bin/install -c -m 0644 ./tutorial/* /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/tutorial
+/bin/mkdir -p /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/tutorial2
+/usr/bin/install -c -m 0644 ./tutorial2/* /workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/doc/libxslt-1.1.34/html/tutorial2
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man1'
+ /usr/bin/install -c -m 644 xsltproc.1 '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/man/man1'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/doc'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/doc'
+Making install in tests
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+Making install in docs
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docs'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docs'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docs'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docs'
+Making install in REC1
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC1'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC1'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC1'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC1'
+Making install in REC2
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC2'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC2'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC2'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC2'
+Making install in REC
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/REC'
+Making install in general
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/general'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/general'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/general'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/general'
+Making install in namespaces
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/namespaces'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/namespaces'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/namespaces'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/namespaces'
+Making install in keys
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/keys'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/keys'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/keys'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/keys'
+Making install in numbers
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/numbers'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/numbers'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/numbers'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/numbers'
+Making install in documents
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/documents'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/documents'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/documents'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/documents'
+Making install in extensions
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/extensions'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/extensions'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/extensions'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/extensions'
+Making install in reports
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/reports'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/reports'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/reports'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/reports'
+Making install in xmlspec
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xmlspec'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xmlspec'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xmlspec'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xmlspec'
+Making install in multiple
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/multiple'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/multiple'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/multiple'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/multiple'
+Making install in xinclude
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xinclude'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xinclude'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xinclude'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/xinclude'
+Making install in XSLTMark
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/XSLTMark'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/XSLTMark'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/XSLTMark'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/XSLTMark'
+Making install in docbook
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docbook'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docbook'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docbook'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/docbook'
+Making install in exslt
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+Making install in common
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/common'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/common'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/common'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/common'
+Making install in functions
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/functions'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/functions'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/functions'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/functions'
+Making install in math
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/math'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/math'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/math'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/math'
+Making install in saxon
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/saxon'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/saxon'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/saxon'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/saxon'
+Making install in sets
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/sets'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/sets'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/sets'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/sets'
+Making install in strings
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/strings'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/strings'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/strings'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/strings'
+Making install in dynamic
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/dynamic'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/dynamic'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/dynamic'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/dynamic'
+Making install in date
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/date'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/date'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/date'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt/date'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+make[4]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/exslt'
+Making install in plugins
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/plugins'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/plugins'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/plugins'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/plugins'
+Making install in fuzz
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/fuzz'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/fuzz'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/fuzz'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests/fuzz'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+make[3]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34/tests'
+make[1]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34'
+make[2]: Entering directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/bin'
+ /usr/bin/install -c xslt-config '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/bin'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+ /usr/bin/install -c -m 644 xsltConf.sh '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/aclocal'
+ /usr/bin/install -c -m 644 libxslt.m4 '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/share/aclocal'
+ /bin/mkdir -p '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libxslt.pc libexslt.pc '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ports/x86_64-pc-linux-gnu/libxslt/1.1.34/lib/pkgconfig'
+make[2]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34'
+make[1]: Leaving directory '/workdir/vendor/bundle/ruby/2.6.0/gems/nokogiri-1.10.9/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxslt/1.1.34/libxslt-1.1.34'

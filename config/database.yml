@@ -16,7 +16,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  host: localhost  
+  host: localhost
   database: AnayumeAppDB_test
 
 production:
