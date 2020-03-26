@@ -9,21 +9,21 @@
         <ul class="navbar-nav">
           <% if logged_in? %>
           <li class="nav-item">
-            <%= link_to "ログアウト", logout_path, method: :delete, class: "nav-link" %>
+            <%= link_to "\uf2f5 ログアウト", logout_path, method: :delete, class: "nav-link fa" %>
           </li>
           <li class="nav-item">
-            <%= link_to "マイページ", user_path(@current_user), class: "nav-link" %>
+            <%= link_to "\uf118 マイページ", user_path(@current_user), class: "nav-link fa" %>
           </li>
           </li>
           <li class="nav-item">
-            <%= link_to "設定変更", edit_user_path(@current_user), class: "nav-link" %>
+            <%= link_to "\uf013 設定", edit_user_path(@current_user), class: "nav-link fa" %>
           </li>
           <% else %>
           <li class="nav-item">
-            <%= link_to "ログイン", login_path, class: "nav-link" %>
+            <%= link_to "\uf2f6 ログイン", login_path, class: "nav-link fa" %>
           </li>
           <li class="nav-item">
-            <%= link_to "新規登録", signup_path, class: "nav-link" %>
+            <%= link_to "\uf234 新規登録", signup_path, class: "nav-link fa" %>
           </li>
           <% end %>
         </ul>

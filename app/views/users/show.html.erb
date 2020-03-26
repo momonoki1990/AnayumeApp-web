@@ -1,23 +1,25 @@
 <div class="container text-white">
-<div class="row">
-<div class="col-md-6">
-<div class="sticky">
-<section class="user-info mt-5 mb-2">
-  <%= render 'shared/user_info' %>
-</section>
-<section class="user-profile">
-  <%= render 'shared/user_profile' %>
-</section>
-</div>
-</div>
-<div class="col-md-6 mt">
-<% if @feed_items.any? %>
-  <div class="d-flex justify-content-between mb-2">
-    <h4>投稿(<%= @user.dreamposts.count %>)</h4>
-    <%= render 'shared/search_form'%>
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="sticky">
+        <section class="user-info mt-5 mb-2">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="user-profile">
+          <%= render 'shared/user_profile' %>
+        </section>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt">
+      <% if @feed_items.any? %>
+      <div class="d-flex justify-content-end mb-2">
+        <%= render 'shared/search_form'%>
+      </div>
+      <%= render 'shared/feed' %>
+      <% end %>
+    </div>
+
   </div>
-  <%= render 'shared/feed' %>
-<% end %>
-</div>
-</div>
 </div>

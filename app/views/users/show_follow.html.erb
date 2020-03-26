@@ -1,25 +1,26 @@
 <div class="container text-white show-follow">
-<div class="row">
-<div class="col-md-6">
-<div class="sticky">
-<section class="user_info mt-5">
-<%= link_to @user.name, @user, class: 'h3 link-white' %>
-</section>
-<section class="stats">
-<%= render 'shared/stats' %>
-</section>
-<%= render 'follow_form' if logged_in? %>
-</div>
-</div>
-<div class="col-md-6 mt">
-<h4><%= @title %></h4>
-<% if @users.any? %>
-<div class="show-follows jscroll">
-<%= render @users %>
-<%= paginate @users %>
-</div>
+  <div class="row">
 
-<% end %>
-</div>
-</div>
+    <div class="col-md-6">
+      <div class="sticky">
+        <section class="user-info mt-5 mb-2">
+          <%= render 'shared/user_info' %>
+        </section>
+        <section class="user-profile">
+          <%= render 'shared/user_profile' %>
+        </section>
+      </div>
+    </div>
+
+    <div class="col-md-6 mt">
+      <h4><%= @title %></h4>
+      <% if @users.any? %>
+      <div class="show-follows jscroll">
+        <%= render @users %>
+        <%= paginate @users %>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
 </div>

@@ -42,22 +42,47 @@ header {
   .navbar-toggler-icon {
     color: #fff;
   }
+
+  .navbar-nav {
+    font-size: 1.1rem;
+  }
 }
 
 .btn {
   border-radius: 1rem !important;
 }
 
-.btn-primary {
+.transparent_blue {
+  background-color: rgba(0, 105, 217, 0.6);
+  border: #0069d9 1px solid;
+}
+
+.transparent_blue:hover {
+  background-color: rgba(0, 105, 217, 1)
+}
+
+/*.btn-primary {
   background-color: rgba(0, 105, 217, 0.6);
   border: #0069d9 1px solid;
 }
 
 .btn-primary:hover {
   background-color: rgba(0, 105, 217, 1)
+}*/
+
+.transparent_green {
+  background-color: rgba(0, 0, 0, 0);
+  border: #28a745 1px solid;
+  color: #28a745;
 }
 
-.btn-outline-success {
+.transparent_green:hover {
+  background-color: rgba(40, 167, 69, 0.6);
+  border: #28a745 1px solid;
+  color: #fff;
+}
+
+/*.btn-outline-success {
   background-color: rgba(0, 0, 0, 0);
   border: #28a745 1px solid;
   color: #28a745;
@@ -68,6 +93,7 @@ header {
   border: #28a745 1px solid;
   color: #fff;
 }
+*/
 
 .w-80 {
   width: 80%;
@@ -474,11 +500,22 @@ textarea.form-control {
   .btn-area .btn {
     width: 75% !important;
   }
+
+  .text-box {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .mb-area {
     width: 100%;
     padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .message-area h3 {
+    font-size: 1.6rem;
   }
 }
