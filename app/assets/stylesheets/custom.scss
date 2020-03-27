@@ -153,6 +153,7 @@ header {
   display: none;
   z-index: 9999;
   color: #fff;
+  white-space: nowrap;
 }
 
 /*検索窓*/
@@ -479,6 +480,12 @@ textarea.form-control {
   header .navbar-brand {
     font-size: 1.5rem;
   }
+
+  /*homeページのアニメーション*/
+  .start p {
+    font-size: 1.4rem;
+  }
+
 
   /*ログイン前home*/
   .easy-login {
