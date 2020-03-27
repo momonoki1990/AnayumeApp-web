@@ -335,9 +335,6 @@ nav.pagination {
   display: none;
 }
 
-/*reply, likeボタンのpadding*/
-/*.reply .btn, .like .btn { padding: 0.25rem 0.5rem } */
-
 /*ログイン前home-left*/
 
 .home .col-2 {
@@ -479,6 +476,10 @@ textarea.form-control {
     width: 100%;
   }
 
+  header .navbar-brand {
+    font-size: 1.5rem;
+  }
+
   /*ログイン前home*/
   .easy-login {
     display: none;
@@ -489,8 +490,9 @@ textarea.form-control {
     padding-left: 0 !important;
   }
 
-  .message-area {
+  .message-area h3 {
     text-align: center;
+    font-size: 1.4rem;
   }
 
   .btn-area {
@@ -512,9 +514,7 @@ textarea.form-control {
     width: 100%;
     padding-left: 0 !important;
   }
-}
 
-@media screen and (max-width: 991px) {
   .message-area h3 {
     font-size: 1.6rem;
   }
