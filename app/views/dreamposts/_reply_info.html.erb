@@ -1,9 +1,0 @@
-<% if dreampost.in_reply_to != 0 %>
-  <span>
-    返信先:
-    <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
-                    Dreampost.find_by(id: dreampost.in_reply_to).user, class: 'z-2' %>
-    <%= render 'dreamposts/reply_thread', dreampost: dreampost %>
-  </span>
-  <br>
-<% end %>

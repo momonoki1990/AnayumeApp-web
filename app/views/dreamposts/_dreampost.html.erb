@@ -1,41 +1,40 @@
 <div id="dreampost-<%= dreampost.id %>" class="card position-relative">
-    <div class="row">
+  <div class="row">
     <div class="col-2 pt-1 pr-0">
-      <%= render 'shared/dreampost_user_img', dreampost: dreampost %>      
+      <%= render 'shared/dreampost_user_img', dreampost: dreampost %>
     </div>
     <div class="col-10 position-static">
-    <div class="post-info">
-      <div>
-        <span class="user">
-          <%= link_to dreampost.user.name, dreampost.user, class: 'z-2' %>
-        </span>
-        <span class="timestamp">
-          <%= time_ago_in_words(dreampost.created_at) %>
-        </span>
-      </div>
-<% if current_user?(dreampost.user) %>
-      <div class="dropdown">
-        <button class="btn dropdown-toggle z-2" type="button" id="dropdownMenuButton", data-toggle="dropdown">        
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">          
+      <div class="post-info">
+        <div>
+          <span class="user">
+            <%= link_to dreampost.user.name, dreampost.user, class: 'z-2' %>
+          </span>
+          <span class="timestamp">
+            <%= time_ago_in_words(dreampost.created_at) %>
+          </span>
+        </div>
+        <% if current_user?(dreampost.user) %>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle z-2" type="button" id="dropdownMenuButton" , data-toggle="dropdown">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
             <%= link_to "削除する", dreampost, class: 'dropdown-item', method: :delete,
                                         data: { confirm: "削除してよろしいですか？" } %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+
+      <div class="card-body">
+        <div class="card-text">
+          <%= render 'dreamposts/thread', dreampost: dreampost %>
+          <span class="z-2"><%= dreampost.content %></span>
         </div>
       </div>
-<% end %>
-    </div>    
-    
-    <div class="card-body">            
-      <div class="card-text">
-        <%= render 'dreamposts/normal_thread', dreampost: dreampost %>
-        <%= render 'dreamposts/reply_info', dreampost: dreampost %>
-        <span class="z-2"><%= dreampost.content %></span>
-      </div>
+      <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+      <%= render 'dreamposts/reply', dreampost: dreampost %>
+      <%= render 'likes/like', dreampost: dreampost %>
     </div>
-    <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
-    <%= render 'dreamposts/reply', dreampost: dreampost %>
-    <%= render 'likes/like', dreampost: dreampost %>
-    </div>
-    </div>
+  </div>
 </div>

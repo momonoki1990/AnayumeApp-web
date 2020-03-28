@@ -1,15 +1,15 @@
 <% if logged_in? %>
 <a href="<%= user_path(@user.id) %>" class="prof-img">
   <% if @user.nil? %>
-    <%= image_tag 'NHM06uRh_400x400.jpg' %>    
+  <%= image_tag 'NHM06uRh_400x400.jpg' %>
   <% elsif @user.picture? %>
-    <%= image_tag @user.picture.url %>
+  <%= image_tag @user.picture.url %>
   <% else %>
-    <%= image_tag 'NHM06uRh_400x400.jpg' %>
+  <%= image_tag 'NHM06uRh_400x400.jpg' %>
   <% end %>
 </a>
 <% else %>
-  <a class="prof-img">
-    <%= image_tag 'NHM06uRh_400x400.jpg' %>
-  </a>
+<a class="prof-img">
+  <%= image_tag 'NHM06uRh_400x400.jpg' %>
+</a>
 <% end %>

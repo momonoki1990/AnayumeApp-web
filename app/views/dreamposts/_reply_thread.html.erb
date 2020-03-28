@@ -1,11 +1,11 @@
 <span class="reply-thread">
-  <a href="#" data-toggle="modal" data-target="#reply-thread-<%= dreampost.id %>", class="stretched-link">  
+  <a href="#" data-toggle="modal" data-target="#reply-thread-<%= dreampost.id %>" , class="stretched-link">
     スレッドを表示
   </a>
   <div class="modal" id="reply-thread-<%= dreampost.id %>" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">    
+        <div class="modal-header">
           <p class="modal-title" id="exampleModalLabel">
           </p>
           <button type="button" class="close" data-dismiss="modal">
@@ -14,17 +14,33 @@
         </div>
         <div class="modal-body">
           <section class="thread-reply-to">
-            <%= render 'dreamposts/thread_reply_to', dreampost: dreampost %>
+            <div class="row">
+              <div class="col-2 pt-1 pr-0">
+                <%= render 'shared/thread_reply_to_user_img', dreampost: dreampost %>
+              </div>
+              <div class="col-10">
+                <div class="post-info">
+                  <div>
+                    <span class="user">
+                      <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
+                      Dreampost.find_by(id: dreampost.in_reply_to).user %>
+                    </span>
+                    <span class="timestamp">
+                      <%= time_ago_in_words(dreampost.created_at) %>
+                    </span>
+                  </div>
+                </div>
+                <span class="mb-0"><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></span>
+                　 <p class="post-img mb-3">
+                  <%= image_tag Dreampost.find_by(id: dreampost.in_reply_to).picture.url if Dreampost.find_by(id: dreampost.in_reply_to).picture? %>
+                </p>
+              </div>
+            </div>
           </section>
           <section class="thread-reply-from">
-            <%= render 'dreamposts/reply_to', dreampost: dreampost %>
+            <%= render 'dreamposts/detail', dreampost: dreampost %>
           </section>
-
-          
-
-
         </div>
-        
       </div>
     </div>
   </div>
