@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.picture = "default.jpg"
     if @user.save
       @user.send_activation_email
       flash[:info] = "送信されたメールをご確認ください。"
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "設定が変更されました"
+      flash[:success] = "設定が変更されました。"
       redirect_to @user
     else
       render "edit"
