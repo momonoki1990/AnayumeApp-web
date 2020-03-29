@@ -1,13 +1,7 @@
 <div id="user-<%= user.id %>" class="card position-relative">
   <div class="row">
     <div class="col-2 pt-1 pr-0">
-      <a href="<%= user_path(@user.id) %>" class="prof-img">
-        <% if user.picture? %>
-        <%= image_tag user.picture.url %>
-        <% else %>
-        <%= image_tag 'NHM06uRh_400x400.jpg' %>
-        <% end %>
-      </a>
+      <%= render 'shared/user_img', user: user %>
     </div>
     <div class="col-10 position-static">
       <div class="post-info">

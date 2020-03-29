@@ -1,7 +1,0 @@
-<a href="<%= user_path(dreampost_user) %>" class="prof-img z-2">
-  <% if dreampost_user.picture? %>
-  <%= image_tag dreampost_user.picture.url %>
-  <% else %>
-  <%= image_tag 'default_user' %>
-  <% end %>
-</a>

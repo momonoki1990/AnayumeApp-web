@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+<% file_path = Rails.root.join('test', 'fixtures', 'files') %>
+
 naoya: 
   name: Naoya Kumasegawa
   email: naoya@example.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now%>
+  picture: <%= file_path.join('images', 'default_user.jpg') %>
 
 tarou:
   name: Tarou Suzuki
@@ -13,6 +16,7 @@ tarou:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now%>
+  picture: <%= file_path.join('images', 'default_user.jpg') %>
 
 sakura:
   name: Sakura Satou
@@ -20,6 +24,7 @@ sakura:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now%>
+  picture: <%= file_path.join('images', 'default_user.jpg') %>
 
 kaede:
   name: Kaede Kobayashi
@@ -27,6 +32,7 @@ kaede:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now%>
+  picture: <%= file_path.join('images', 'default_user.jpg') %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
@@ -35,4 +41,5 @@ user_<%= n %>:
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
+  picture: <%= file_path.join('images', 'default_user.jpg') %>
 <% end %>

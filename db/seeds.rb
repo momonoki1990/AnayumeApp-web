@@ -8,7 +8,8 @@ User.create!(name: "Example User",
              admin: true,
              activated: true,
              activated_at: Time.zone.now,
-             profile: "猫が好きです。")
+             profile: "猫が好きです。",
+             picture: File.open("#{Rails.root}/app/assets/images/default_user.jpg"))
 
 99.times do |n|
   name = Faker::Name.name
@@ -21,7 +22,8 @@ User.create!(name: "Example User",
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now,
-               profile: profile)
+               profile: profile,
+               picture: File.open("#{Rails.root}/app/assets/images/default_user.jpg"))
 end
 
 # ドリームポスト

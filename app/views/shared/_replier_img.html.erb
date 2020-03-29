@@ -1,10 +1,6 @@
 <% if logged_in? %>
 <a href="<%= user_path(current_user) %>" class="prof-img">
-  <% if current_user.picture? %>
   <%= image_tag current_user.picture.url %>
-  <% else %>
-  <%= image_tag 'default_user.jpg' %>
-  <% end %>
 </a>
 <% else %>
 <a class="prof-img">

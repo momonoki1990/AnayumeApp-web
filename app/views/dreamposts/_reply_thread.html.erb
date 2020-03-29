@@ -16,7 +16,7 @@
           <section class="thread-reply-to">
             <div class="row">
               <div class="col-2 pt-1 pr-0">
-                <%= render 'shared/dreampost_user_img', dreampost_user: Dreampost.find_by(id: dreampost.in_reply_to).user %>
+                <%= render 'shared/user_img', user: Dreampost.find_by(id: dreampost.in_reply_to).user %>
               </div>
               <div class="col-10">
                 <div class="post-info">

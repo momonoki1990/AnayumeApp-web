@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.picture = "default.jpg"
+    @user.picture = "default_user.jpg"
     if @user.save
       @user.send_activation_email
       flash[:info] = "送信されたメールをご確認ください。"
