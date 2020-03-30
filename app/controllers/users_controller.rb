@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.picture = "default_user.jpg"
+    @user.picture = "default_user.jpg" # 恐らくこれだと正常にデフォルト画像が登録されていない。
     if @user.save
       @user.send_activation_email
       flash[:info] = "送信されたメールをご確認ください。"
