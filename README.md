@@ -1,24 +1,27 @@
-# README
+# AnayumeApp
+現在ポートフォリオとして作成中の夢をテーマとしたSNSです  
+ユーザーが自分自身の夢に関する投稿をすることができ、返信やいいねをつけることができます。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
+- https://momonoki1990.com  
+トップページのおためしログインをクリックすることで、ゲストアカウントとしてログインできます。
 
-Things you may want to cover:
+## 使用技術
+- Ruby 2.6.3, Rails 5.1.6
+- SASS,Bootstrap4,JQuery
+- Docker,Docker-compose
+- nginx,puma
+- AWS (VPC,EC2,RDS for PostgreSQL,S3,Route53,ACM,ALB)
+- Circle CI
+- git, Github
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能一覧
+- ユーザー登録,ログイン,編集機能
+- 投稿機能、画像投稿機能、削除機能
+- 投稿画像、プロフィール画像プレビュー機能
+- 投稿一覧、投稿詳細表示機能
+- ページネーション機能
+- いいね、フォロー機能(Ajax)
+- 返信機能
+- ユーザー一覧、フォローフォロワー一覧
+- 検索機能(投稿)

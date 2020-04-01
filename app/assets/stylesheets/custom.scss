@@ -134,6 +134,50 @@ header {
   cursor: pointer;
 }
 
+/*ユーザー画像*/
+.prof-img {
+  display: block;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.prof-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.prof-img img:hover {
+  filter: brightness(80%);
+  transition-duration: 0.1s
+}
+
+/*設定画面ユーザー画像*/
+.edit-user-image {
+  width: 50%;
+  height: auto;
+}
+
+.edit-user-image:hover {
+  cursor: pointer;
+}
+
+.edit-user-image .prof-img {
+  pointer-events: none;
+}
+
 /*homeページのアニメーション*/
 .start {
   background: #000;
@@ -203,19 +247,6 @@ header {
   ul {
     margin-block-end: 0;
   }
-}
-
-/*プロフィール*/
-.prof-img img {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.prof-img img:hover {
-  filter: brightness(80%);
-  transition-duration: 0.1s
 }
 
 .new_dreampost {
@@ -416,27 +447,8 @@ textarea.form-control {
   border-radius: 0.2rem;
 }
 
-.user-image {
-  width: 50%;
-  height: auto;
-  border-radius: 50%;
-}
 
-.user-image:hover {
-  filter: brightness(80%);
-  transition-duration: 0.1s;
-  cursor: pointer;
-}
 
-.user-image a {
-  pointer-events: none;
-}
-
-.user-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
 
 
 /*ユーザー詳細ページ*/
