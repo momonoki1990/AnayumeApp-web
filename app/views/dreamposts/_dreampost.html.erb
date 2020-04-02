@@ -31,7 +31,9 @@
           <span class="z-2"><%= dreampost.content %></span>
         </div>
       </div>
-      <p class="post-img"><%= image_tag dreampost.picture.url if dreampost.picture? %></p>
+      <p class="post-img">
+        <%= image_tag dreampost.picture.url if dreampost.picture? %>
+      </p>
       <%= render 'dreamposts/reply', dreampost: dreampost %>
       <%= render 'likes/like', dreampost: dreampost %>
     </div>

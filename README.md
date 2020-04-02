@@ -8,7 +8,7 @@
 
 ## 使用技術
 - Ruby 2.6.3, Rails 5.1.6
-- SASS,Bootstrap4,JQuery
+- Sass,Bootstrap4,JQuery
 - Docker,Docker-compose
 - nginx,puma
 - AWS (VPC,EC2,RDS for PostgreSQL,S3,Route53,ACM,ALB)

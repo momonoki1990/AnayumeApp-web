@@ -22,12 +22,18 @@
 
 body {
   background-image: url(bg.jpg);
+  font-family: Arial,
+    "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro",
+    Osaka,
+    メイリオ,
+    Meiryo,
+    "ＭＳ Ｐゴシック",
+    "MS PGothic",
+    sans-serif;
 }
 
-body {
-  font-family: Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
+/*ヘッダー*/
 header {
   .navbar-brand {
     color: #fff;
@@ -48,6 +54,7 @@ header {
   }
 }
 
+/*ボタン*/
 .btn {
   border-radius: 1rem !important;
 }
@@ -61,15 +68,6 @@ header {
   background-color: rgba(0, 105, 217, 1)
 }
 
-/*.btn-primary {
-  background-color: rgba(0, 105, 217, 0.6);
-  border: #0069d9 1px solid;
-}
-
-.btn-primary:hover {
-  background-color: rgba(0, 105, 217, 1)
-}*/
-
 .transparent_green {
   background-color: rgba(0, 0, 0, 0);
   border: #28a745 1px solid;
@@ -81,19 +79,6 @@ header {
   border: #28a745 1px solid;
   color: #fff;
 }
-
-/*.btn-outline-success {
-  background-color: rgba(0, 0, 0, 0);
-  border: #28a745 1px solid;
-  color: #28a745;
-}
-
-.btn-outline-success:hover {
-  background-color: rgba(40, 167, 69, 0.6);
-  border: #28a745 1px solid;
-  color: #fff;
-}
-*/
 
 .w-80 {
   width: 80%;
@@ -144,38 +129,38 @@ header {
     display: block;
     padding-top: 100%;
   }
-}
 
-.prof-img img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  border-radius: 50%;
-  object-fit: cover;
-}
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
 
-.prof-img img:hover {
-  filter: brightness(80%);
-  transition-duration: 0.1s
+    &:hover {
+      filter: brightness(80%);
+      transition-duration: 0.1s
+    }
+  }
 }
 
 /*設定画面ユーザー画像*/
 .edit-user-image {
   width: 50%;
   height: auto;
-}
 
-.edit-user-image:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
+  }
 
-.edit-user-image .prof-img {
-  pointer-events: none;
+  .prof-img {
+    pointer-events: none;
+  }
 }
 
 /*homeページのアニメーション*/
@@ -187,17 +172,17 @@ header {
   height: 100%;
   width: 100%;
   z-index: 9000;
-}
 
-.start p {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  z-index: 9999;
-  color: #fff;
-  white-space: nowrap;
+  p {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 9999;
+    color: #fff;
+    white-space: nowrap;
+  }
 }
 
 /*検索窓*/
@@ -213,20 +198,20 @@ header {
   right: 0;
   bottom: 2rem;
   opacity: 0.6;
-}
 
-#page_top a {
-  width: 60px;
-  height: 60px;
-  text-decoration: none;
-}
+  a {
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
 
-#page_top a::before {
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  content: '\f139';
-  font-size: 50px;
-  color: #3fefee;
+    &:before {
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      content: '\f139';
+      font-size: 50px;
+      color: #3fefee;
+    }
+  }
 }
 
 /*flashメッセージ*/
@@ -288,113 +273,94 @@ textarea {
 }
 
 /*投稿一覧*/
-
-.col-md-6>h4 {
-  color: #fff;
-}
-
 .card {
   color: #000;
   padding: 5px 10px;
   margin-bottom: 5px;
-}
 
-.card-body {
-  padding: 0;
-}
+  .post-info {
+    display: flex;
+    justify-content: space-between;
 
-.post-img {
-  text-align: center;
-  margin-bottom: 0;
-}
+    >div {
+      display: inline-block;
+    }
 
-.post-img>img {
-  max-width: 50%;
-  height: auto;
-  border-radius: 5px;
-}
+    .dropdown-toggle {
+      padding: 0;
 
-.post-info {
-  display: flex;
-  justify-content: space-between;
-}
+      &:after {
+        display: none;
+      }
+    }
+  }
 
-.post-info>div {
-  display: inline-block;
-}
+  .card-body {
+    padding: 0;
+  }
 
-.dropdown-toggle {
-  padding: 0;
-}
+  .post-img {
+    text-align: center;
+    margin-bottom: 0;
 
-.dropdown-toggle::after {
-  display: none;
+    img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
 }
 
 /*.stretched-link:hover::after { background-color: rgba(0, 0, 0, 0.1); }*/
+.reply {
 
-.reply .reply-from .reply-form-blank {
-  border: 1px solid #000;
-  height: calc(1.3rem * 4);
-  line-height: 1.3rem;
-  border-radius: 0.2rem;
-  color: #757575
+  >.btn:hover {
+    background-color: #CCE5FF;
+    color: #65B2FF;
+    border-radius: 50% !important;
+    line-height: 1;
+  }
+
+  .reply-from {
+    .reply-form-blank {
+      border: 1px solid #000;
+      height: calc(1.3rem * 4);
+      line-height: 1.3rem;
+      border-radius: 0.2rem;
+      color: #757575
+    }
+  }
+
+  .fa-image {
+    color: #424242
+  }
 }
 
-.reply .reply-from .fa-image {
-  color: #424242
+.like {
+  form {
+    display: inline-block;
+  }
+
+  .btn:hover {
+    background-color: #FFCCE5;
+    color: #FF65B2;
+    border-radius: 50% !important;
+    line-height: 1;
+  }
 }
 
-.like form {
-  display: inline-block;
-}
-
-.reply>.btn:hover {
-  background-color: #CCE5FF;
-  color: #65B2FF;
-  border-radius: 50% !important;
-  line-height: 1;
-}
-
-.like .btn:hover {
-  background-color: #FFCCE5;
-  color: #FF65B2;
-  border-radius: 50% !important;
-  line-height: 1;
-}
-
+/*ページネーション*/
 nav.pagination {
   display: none;
 }
 
 /*ログイン前home-left*/
-
-.home .col-2 {
-  .form-group {
-    margin-bottom: 0.75rem;
-  }
-
-  .btn {
-    padding: 0.5rem 0.45rem;
-  }
-}
-
-/*.easy-login>.col-5,
-.easy-login>.col-2 {
-  padding-left: 0;
-  color: #fff;
-}
-
-.easy-login>.col-2 {
-  padding-bottom: 4px;
-}*/
-
 .message-area {
   color: #ffffff;
-}
 
-.message-area h3 {
-  white-space: nowrap;
+  h3 {
+    white-space: nowrap;
+  }
 }
 
 /*ログイン後home-left*/
@@ -404,24 +370,24 @@ nav.pagination {
   background-color: #fff;
   color: #000;
   border-radius: 0.2rem;
-}
 
-.dreampost-textarea textarea {
-  border: 0px;
-  resize: none;
-  outline: none;
-}
+  textarea {
+    border: 0px;
+    resize: none;
+    outline: none;
+  }
 
-.dreampost-image {
-  height: auto !important;
-  min-height: 0px !important;
-}
+  .dreampost-image {
+    height: auto !important;
+    min-height: 0px !important;
 
-.dreampost-image>img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-  padding: 0.5rem 0;
+    >img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      padding: 0.5rem 0;
+    }
+  }
 }
 
 /*login/signup/settingページ*/
@@ -432,24 +398,13 @@ nav.pagination {
   max-width: 430px;
 }
 
-.form-check-input {
-  margin-left: 0;
-}
-
-.form-check-input+span {
-  margin-left: 1.25rem;
-}
-
+/*プロフィール編集(users/edit)*/
 textarea.form-control {
   width: 100%;
   height: calc(1.3rem * 7);
   line-height: 1.3rem;
   border-radius: 0.2rem;
 }
-
-
-
-
 
 /*ユーザー詳細ページ*/
 .user-profile div {
@@ -500,10 +455,6 @@ textarea.form-control {
 
 
   /*ログイン前home*/
-  .easy-login {
-    display: none;
-  }
-
   .mb-area {
     width: 100%;
     padding-left: 0 !important;
@@ -516,10 +467,10 @@ textarea.form-control {
 
   .btn-area {
     text-align: center;
-  }
 
-  .btn-area .btn {
-    width: 75% !important;
+    .btn {
+      width: 75% !important;
+    }
   }
 
   .text-box {

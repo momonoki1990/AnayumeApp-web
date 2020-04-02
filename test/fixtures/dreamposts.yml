@@ -4,7 +4,7 @@ engineer:
   user: naoya
 
 novelist:
-  content: "小説を書きたい。"
+  content: "小説家になりたい。"
   created_at: <%= 10.minutes.ago %>
   user: naoya
 
