@@ -54,6 +54,16 @@ class UsersController < ApplicationController
     render "show_follow"
   end
 
+  def index
+    if logged_in?
+      @users = User.where.not(id: current_user.id).page(params[:page]).per(20)
+      @user = current_user
+      @dreampost = current_user.dreamposts.build if logged_in?
+    else
+      @users = User.all.page(params[:page]).per(20)
+    end
+  end
+
   private
 
   def user_params

@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'search', to: 'dreamposts#search'
 
   # リロード時のエラー対応
-  get 'users', to: 'users#new'
   get 'dreamposts', to: 'static_pages#home'
 
   resources :users do
