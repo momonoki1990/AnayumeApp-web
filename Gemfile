@@ -11,6 +11,7 @@ gem 'coffee-rails',            '4.2.2'
 gem 'counter_culture',         '~> 1.8'
 gem 'faker',                   '1.7.3'
 gem 'font-awesome-sass',       '~> 5.4.1'
+gem 'geocoder'
 gem 'jbuilder',                '2.7.0'
 gem 'jquery-rails',            '4.3.1'
 gem 'kaminari'
@@ -46,5 +47,5 @@ group :test do
 end
 
 group :production do
-  gem 'fog',  '1.42'
+  gem 'fog', '1.42'
 end
