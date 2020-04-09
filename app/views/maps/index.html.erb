@@ -1,12 +1,107 @@
-<h2>gmap</h2>
-<!-- form_withはデフォルトでremote: trueの挙動になります -->
-<%= form_with url: map_request_path, method: :get do |f|%>
-<%= f.text_field :address %>
-<%= f.submit '地図表示' %>
-<% end %>
-
-<div id="map">
+<div class="container text-white home">
+  <div class="row">
+    <div class="col-md-3">
+      <!-- form_withはデフォルトでremote: trueの挙動になります -->
+      <%= form_with url: map_request_path, method: :get do |f|%>
+      <%= f.text_field :address, class: 'form-control'  %>
+      <%= f.submit '地図表示' %>
+      <% end %>
+      <%= form_for @map do |f| %>
+      <span id="address"></span>      
+      <%= f.label :title, "タイトル", class: 'mt-3' %>
+      <%= f.text_field :title, class: 'form-control', id: 'title' %>
+      <%= f.label :comment, "コメント", class: 'mt-3' %>
+      <%= f.text_field :comment, class: 'form-control' %>
+      <div id="result" class="map-image text-center"></div>
+      <span class="picture">
+        <label for="map_picture">
+          <i class="far fa-image"></i>
+        </label>
+        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+      </span>
+      <%= f.submit "送信", class: "btn btn-primary transparent_blue" %>
+      <% end %>
+    </div>
+    <div class="col-md-9 mt">
+      <h2>gmap</h2>      
+      <div id="map">
+      </div>
+    </div>
+  </div>
 </div>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXb9ozNmGip5Z-VSGgztqExeeF3WkvHVM&callback=initMap" async
   defer></script>
+
+<!--ファイルサイズの監視と警告-->
+<script type="text/javascript">
+  $('#map_picture').bind('change', function () {
+    var size_in_megabytes = this.files[0].size / 1024 / 1024;
+    if (size_in_megabytes > 5) {
+      alert('ファイルのサイズは5MBまでです。小さなファイルをご選択ください。');
+    }
+  });
+</script>
+
+<script>
+  $(function () {
+    $('#map_picture').change(function () {
+      var file = $(this).prop('files')[0];
+      if (!file.type.match('image.*')) {
+        return;
+      }
+      var fileReader = new FileReader();
+      fileReader.onloadend = function () {
+        $('#result').html('<img src="' + fileReader.result + '"/>');
+      }
+      fileReader.readAsDataURL(file);
+    });
+  });
+</script>
+
+<script>
+let mapInstance //この変数はmap.js.erbでも使う
+
+function initMap() {
+mapInstance = new google.maps.Map(document.getElementById('map'), {
+center: {
+lat: 35.681,
+lng: 139.767
+},
+zoom: 8
+});
+
+<% @maps.each do |map| %>
+  pos = new google.maps.LatLng(
+  <%=map.latitude%>, //latitude
+  <%=map.longitude%> //longitude
+);
+  marker = new google.maps.Marker({
+  map: mapInstance,
+  position: pos,
+  icon: {
+  url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
+  scaledSize: new google.maps.Size(40, 40) //サイズ
+  }
+});
+
+(function(a){
+  var infoboxContent = document.createElement('div');
+  // infobox に表示するHTML
+  infoboxContent.innerHTML = 
+  '<div style="color: black;"><%=map.address%></div>' +
+  '<div style="color: black;"><%=map.title%></div>' +
+  '<div style="color: black;"><%=map.comment%></div>'
+  ;
+  var infoWindow = new google.maps.InfoWindow({
+  content: infoboxContent
+  });
+  a.addListener('click', function() {
+  infoWindow.open(mapInstance, a);
+});
+}(marker));
+
+<% end %>
+
+
+}
+</script>
