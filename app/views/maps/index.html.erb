@@ -152,15 +152,13 @@ position: results[0].geometry.location
 let title = document.getElementById('title');
 title.setAttribute("value", inputAddress );
 
-
 let hidden_address = document.getElementById('hidden_address');
 hidden_address.setAttribute("value", inputAddress);
 
 } else {
-alert('Geocode was not successful for the following reason: ' + status);
+alert('地名や住所を入力してください。');
 }
 });
 }
-
 
 </script>

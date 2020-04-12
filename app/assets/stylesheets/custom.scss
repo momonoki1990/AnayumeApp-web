@@ -81,7 +81,7 @@ header {
 }
 
 .transparent_gray {
-  background-color: rgba(108, 117, 125, 0.6);  
+  background-color: rgba(108, 117, 125, 0.6);
   border: #696969 1px solid;
 }
 
@@ -471,10 +471,14 @@ textarea.form-control {
     }
   }
 
-  .map-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+  .map-img {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
   }
 }
 

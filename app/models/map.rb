@@ -1,5 +1,6 @@
 class Map < ApplicationRecord
   belongs_to :user
+  default_scope -> { order(created_at: :desc) }
   mount_uploader :picture, PictureUploader
   validates :latitude, presence: true
   validates :longitude, presence: true
