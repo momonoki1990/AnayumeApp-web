@@ -27,3 +27,6 @@
 
 # アップロードされた画像を無視する
 /public/uploads
+
+# docker環境変数
+/.env
