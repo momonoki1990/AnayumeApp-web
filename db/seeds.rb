@@ -166,3 +166,11 @@ following = users[2..12]
 followers = users[3..12]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
+
+# 地図
+guest.maps.create!(address: "シンガポール", latitude: 1.352, longitude: 103.8198, title: "シンガポール", comment: "一度は行ってみたいアジアの大都市！", picture: File.open("#{Rails.root}/app/assets/images/singapore.jpg"))
+guest.maps.create!(address: "バルセロナ", latitude: 41.3816, longitude: 2.1409, title: "バルセロナ", comment: "情熱の国スペイン！クラシコ見てみたいなぁ...", picture: File.open("#{Rails.root}/app/assets/images/barcelona.jpg"))
+guest.maps.create!(address: "富士山", latitude: 35.360739, longitude: 138.72732, title: "富士山", comment: "まだ登ったことないんですよね。日本一の山！", picture: File.open("#{Rails.root}/app/assets/images/fuji.jpg"))
+guest.maps.create!(address: "館山", latitude: 34.996546, longitude: 139.870044, title: "館山", comment: "館山のリゾートホテルに泊まってみたいなぁ。", picture: File.open("#{Rails.root}/app/assets/images/tateyama.jpg"))
+guest.maps.create!(address: "ニュー・デリー", latitude: 28.613939, longitude: 77.209021, title: "ニュー・デリー", comment: "本場のカレーを食べてみたい！", picture: File.open("#{Rails.root}/app/assets/images/delhi.jpg"))
+guest.maps.create!(address: "台北", latitude: 25.032969, longitude: 121.565418, title: "台北", comment: "台湾スイーツを食べ尽くしたい...", picture: File.open("#{Rails.root}/app/assets/images/taipei.jpg"))

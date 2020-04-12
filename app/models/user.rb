@@ -92,6 +92,10 @@ class User < ApplicationRecord
     following.include?(other_user)
   end
 
+  def map_list
+    Map.where("user_id = :user_id", user_id: id)
+  end
+
   private
 
   def downcase_email

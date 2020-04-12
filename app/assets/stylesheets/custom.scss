@@ -80,6 +80,15 @@ header {
   color: #fff;
 }
 
+.transparent_gray {
+  background-color: rgba(108, 117, 125, 0.6);  
+  border: #696969 1px solid;
+}
+
+.transparent_gray:hover {
+  background-color: rgba(108, 117, 125, 1)
+}
+
 .w-80 {
   width: 80%;
 }
@@ -377,8 +386,7 @@ nav.pagination {
     outline: none;
   }
 
-  .dreampost-image,
-  .map-image {
+  .dreampost-image {
     height: auto !important;
     min-height: 0px !important;
 
@@ -424,9 +432,52 @@ textarea.form-control {
 }
 
 /*地図*/
-#map {
-  height: 400px;
+.map {
+  .col-lg-3 {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .gmap {
+    height: 400px;
+    border-radius: 5px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  }
+
+  .new_map {
+    .map-image {
+      height: auto !important;
+      min-height: 0px !important;
+
+      >img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    padding: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .map-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 }
+
 
 
 @media screen and (max-width: 767px) {
@@ -439,7 +490,7 @@ textarea.form-control {
   }
 
   .mt {
-    margin-top: 3rem;
+    margin-top: 3rem !important;
   }
 
   .field {

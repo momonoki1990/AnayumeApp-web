@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   resources :dreamposts,          only: %i[create destroy]
   resources :relationships,       only: %i[create destroy]
   resources :likes,               only: %i[create destroy]
-  resources :maps,                only: %i[index create]
+  resources :maps,                only: %i[index create destroy]
 end

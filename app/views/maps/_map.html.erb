@@ -1,0 +1,14 @@
+<div id="map-<%= map.id %>" class="card position-relative">
+  <div class="card-body">
+    <div class="card-text">
+      <div class="d-flex justify-content-between">
+        <div><%= map.title %></div>
+        <%= render 'shared/dropdown', object: map %>
+      </div>
+      <div><%= map.comment %></div>
+    </div>
+  </div>
+  <div class="map-img">
+    <%= image_tag map.picture.url if map.picture? %>
+  </div>
+</div>

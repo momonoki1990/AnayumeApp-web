@@ -1,0 +1,9 @@
+<div class="dropdown">
+  <button class="btn dropdown-toggle z-2" type="button" id="dropdownMenuButton" , data-toggle="dropdown">
+    <i class="fas fa-chevron-down"></i>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <%= link_to "削除する", object, class: 'dropdown-item', method: :delete,
+                                        data: { confirm: "削除してよろしいですか？" } %>
+  </div>
+</div>

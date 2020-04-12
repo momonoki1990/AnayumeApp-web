@@ -14,15 +14,7 @@
           </span>
         </div>
         <% if current_user?(dreampost.user) %>
-        <div class="dropdown">
-          <button class="btn dropdown-toggle z-2" type="button" id="dropdownMenuButton" , data-toggle="dropdown">
-            <i class="fas fa-chevron-down"></i>
-          </button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <%= link_to "削除する", dreampost, class: 'dropdown-item', method: :delete,
-                                        data: { confirm: "削除してよろしいですか？" } %>
-          </div>
-        </div>
+          <%= render 'shared/dropdown', object: dreampost %>
         <% end %>
       </div>
       <div class="card-body">
