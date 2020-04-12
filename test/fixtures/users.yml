@@ -3,7 +3,7 @@
 <% file_path = Rails.root.join('test', 'fixtures', 'files') %>
 
 naoya: 
-  name: Naoya Kumasegawa
+  name: Naoya Example
   email: naoya@example.com
   password_digest: <%= User.digest('password') %>
   activated: true
