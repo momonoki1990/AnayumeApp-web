@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+egypt:
   latitude: 1.5
   longitude: 1.5
   title: MyText
   comment: MyText
   picture: MyString
-  user: one
+  user: naoya
 
 two:
   latitude: 1.5
