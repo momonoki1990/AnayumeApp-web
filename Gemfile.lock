@@ -51,6 +51,7 @@ GEM
       execjs
     backport (1.1.2)
     bcrypt (3.1.12)
+    bcrypt_pbkdf (1.0.1)
     benchmark (0.1.0)
     bindex (0.8.1)
     bootstrap (4.4.1)
@@ -94,6 +95,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     dry-inflector (0.2.0)
     e2mmap (0.1.0)
+    ed25519 (1.2.4)
     erubi (1.9.0)
     excon (0.73.0)
     execjs (2.7.0)
@@ -497,6 +499,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (= 3.1.12)
+  bcrypt_pbkdf
   bootstrap (= 4.4.1)
   byebug (= 9.0.6)
   capistrano
@@ -506,6 +509,7 @@ DEPENDENCIES
   carrierwave (= 1.2.2)
   coffee-rails (= 4.2.2)
   counter_culture (~> 1.8)
+  ed25519
   faker (= 1.7.3)
   fog (= 1.42)
   font-awesome-sass (~> 5.4.1)

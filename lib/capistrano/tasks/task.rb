@@ -1,7 +1,7 @@
 # pumaのpidファイル、設定ファイルのディレクトリを指定
 namespace :puma do
   task :environment do
-    set :puma_pid,    "#{current_path}/tmp/puma.pid"
+    set :puma_pid,    "#{current_path}/tmp/pids/puma.pid"
     set :puma_config, "#{current_path}/config/puma.rb"
   end
 
