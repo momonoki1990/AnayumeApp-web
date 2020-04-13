@@ -19,7 +19,7 @@ namespace :puma do
 
   # pumaを再起動するメソッド
   def reload_puma
-    execute :kill, "-s USR2 $(< #{fetch(:puma_pid)})"
+    execute :kill, "-s SIGUSR2 $(< #{fetch(:puma_pid)})"
   end
 
   # pumaを強制終了するメソッド
