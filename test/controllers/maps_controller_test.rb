@@ -23,7 +23,7 @@ class MapsControllerTest < ActionDispatch::IntegrationTest
     log_in_as(@other_user)
     get maps_path(@user)
     assert flash.empty?
-    assert_redirected_to root_url
+    assert_redirected_to maps_url
   end
 
   test "should redirect destroy for wrong map" do
@@ -32,6 +32,6 @@ class MapsControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'Map.count' do
       delete map_path(map)
     end
-    assert_redirected_to root_url
+    assert_redirected_to maps_url
   end
 end

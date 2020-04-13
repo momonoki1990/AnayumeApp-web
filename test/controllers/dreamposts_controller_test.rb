@@ -18,7 +18,7 @@ class DreampostsControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'Dreampost.count' do
       delete dreampost_path(@dreampost)
     end
-    assert_redirected_to maps_url
+    assert_redirected_to login_url
   end
 
   test "should redirect destroy for wrong dreampost" do
@@ -27,6 +27,6 @@ class DreampostsControllerTest < ActionDispatch::IntegrationTest
     assert_no_difference 'Dreampost.count' do
       delete dreampost_path(dreampost)
     end
-    assert_redirected_to maps_url
+    assert_redirected_to root_url
   end
 end
