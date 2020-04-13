@@ -8,7 +8,7 @@ namespace :puma do
   # pumaをスタートさせるメソッド
   def start_puma
     within current_path do
-      execute :bundle, :exec, :puma, "c #{fetch(:puma_config)} -E #{fetch(:rails_env)} -D"
+      execute :bundle, :exec, :puma, "-C #{fetch(:puma_config)} -E #{fetch(:rails_env)} -D"
     end
   end
 
