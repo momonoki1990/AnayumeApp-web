@@ -19,13 +19,6 @@ class MapsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to login_url
   end
 
-  test "should redirect index when logged in as wrong user" do
-    log_in_as(@other_user)
-    get maps_path(@user)
-    assert flash.empty?
-    assert_redirected_to maps_url
-  end
-
   test "should redirect destroy for wrong map" do
     log_in_as(@other_user)
     map = maps(:egypt)
