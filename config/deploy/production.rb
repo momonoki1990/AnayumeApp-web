@@ -55,7 +55,7 @@
 #   }
 
 # Deploy先の情報
-server 'www.momonoki1990.com', user: 'naoya', roles: %w[app db web]
+server '52.196.160.117', user: 'naoya', roles: %w[app db web]
 
 # SSH設定
 set :ssh_options, keys: '~/.ssh/AnayumeApp_key_rsa'
