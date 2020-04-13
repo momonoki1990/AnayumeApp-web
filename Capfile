@@ -36,3 +36,6 @@ require "capistrano/rails/migrations"
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/task.rb").each { |r| import r }
+
+require 'capistrano/puma'
+install_plugin Capistrano::Puma
