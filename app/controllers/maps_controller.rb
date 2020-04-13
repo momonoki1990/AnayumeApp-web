@@ -1,6 +1,6 @@
 class MapsController < ApplicationController
   before_action :logged_in_user, only: %i[index create destroy]
-  before_action :correct_user, only: :destroy
+  before_action :correct_user, only: %i[index create destroy]
 
   def index
     @map = Map.new

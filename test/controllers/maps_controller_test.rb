@@ -27,7 +27,7 @@ class MapsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should redirect destroy for wrong map" do
-    log_in_as(@other)
+    log_in_as(@other_user)
     map = maps(:egypt)
     assert_no_difference 'Map.count' do
       delete map_path(map)
