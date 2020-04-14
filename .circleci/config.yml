@@ -53,3 +53,12 @@ jobs:
       # テストサマリー (https://circleci.com/docs/ja/2.0/collect-test-data/) に表示するテスト結果をアップロード
       - store_test_results: 
           path: test_results
+
+      - add_ssh_keys:
+          fingerprints:
+            - {{9a:94:e9:ed:53:48:3a:b9:c8:eb:1b:db:83:db:be:08}}
+
+      - deploy:
+         name: Capistranoデプロイ
+         command:
+           bundle exec cap production deploy
