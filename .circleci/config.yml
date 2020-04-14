@@ -54,11 +54,15 @@ jobs:
       - store_test_results: 
           path: test_results
 
+      # 自動デプロイ
       - add_ssh_keys:
           fingerprints:
-            - {{9a:94:e9:ed:53:48:3a:b9:c8:eb:1b:db:83:db:be:08}}
+            - "9a:94:e9:ed:53:48:3a:b9:c8:eb:1b:db:83:db:be:08"
 
       - deploy:
-         name: Capistranoデプロイ
-         command:
-           bundle exec cap production deploy
+          name: Capistrano deploy
+          command: |
+            if [ "${CIRCLE_BRANCH}" != "master" ]; then
+              exit 0
+            fi
+            bundle exec cap production deploy
