@@ -2,7 +2,7 @@
   <div class="card-body">
     <div class="card-text">
       <div class="d-flex justify-content-between">
-        <div><%= map.title %></div>
+        <div><a href="javascript:OnLinkClick(<%= map.latitude %>, <%= map.longitude %>);"><%= map.title %></a></div>
         <%= render 'shared/dropdown', object: map %>
       </div>
       <div><%= map.comment %></div>
@@ -12,3 +12,11 @@
     <%= image_tag map.picture.url if map.picture? %>
   </div>
 </div>
+
+<script>
+  // リストのリンクをクリックした時に地図の位置を動かす
+  function OnLinkClick(x, y) {
+    mapInstance.setCenter(new google.maps.LatLng(x+2, y));
+    mapInstance.setZoom(6);
+  }
+</script>
