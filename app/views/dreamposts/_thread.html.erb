@@ -21,6 +21,9 @@
     </div>
   </div>
 </span>
+<% elsif Dreampost.find_by(id: dreampost.in_reply_to).nil? %>
+  <span>(返信先の投稿は削除されています)</span>
+  <br>
 <% else %>
 <span>
   返信先:
