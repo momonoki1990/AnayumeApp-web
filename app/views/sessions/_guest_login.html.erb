@@ -1,4 +1,4 @@
-<%= form_for(:session, url: login_path, method: :post) do |f| %>
+<%= form_for(:session, url: login_path, method: :post, html: { class: "text-center" }) do |f| %>
 <%= f.hidden_field :email, value: 'guest@example.com' %>
 <%= f.hidden_field :password, value: 'sample' %>
 <%= f.submit 'おためしログイン', class:'btn btn-primary transparent_blue w-80 mt-2' %>

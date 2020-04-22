@@ -1,6 +1,5 @@
 <div class="container text-white home">
   <div class="row">
-
     <div class="col-md-6">
       <div class="sticky">
         <% if logged_in? %>
@@ -10,14 +9,11 @@
         <% end %>
       </div>
     </div>
-
     <div class="col-md-6 mt">
       <div class="d-flex justify-content-end mb-2">
         <%= render "shared/search_form" %>
       </div>
       <%= render "shared/feed" %>
     </div>
-
   </div>
 </div>
-<%= render "static_pages/top" %>

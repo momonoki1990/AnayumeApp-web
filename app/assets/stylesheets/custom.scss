@@ -172,28 +172,6 @@ header {
   }
 }
 
-/*homeページのアニメーション*/
-.start {
-  background: #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 9000;
-
-  p {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    z-index: 9999;
-    color: #fff;
-    white-space: nowrap;
-  }
-}
-
 /*検索窓*/
 .search .form-control {
   width: 11rem;
@@ -286,6 +264,10 @@ textarea {
   color: #000;
   padding: 5px 10px;
   margin-bottom: 5px;
+
+  .modal-header { 
+    padding: 0.3rem 1rem;
+  }
 
   .post-info {
     display: flex;
@@ -405,6 +387,10 @@ nav.pagination {
 .login .w-75,
 .password_reset .w-75 {
   max-width: 430px;
+}
+
+.login .w-80 {
+  width: 50%!important;
 }
 
 /*プロフィール編集(users/edit)*/
