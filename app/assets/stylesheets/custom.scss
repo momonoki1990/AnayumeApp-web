@@ -302,9 +302,23 @@ textarea {
   }
 }
 
-/*.stretched-link:hover::after { background-color: rgba(0, 0, 0, 0.1); }*/
-.reply {
+/*スレッド*/
+.thread-reply-to .dreampost-content {
+  font-size: 1rem;
+}
 
+.thread-reply-from .dreampost-content {
+  font-size: 1.5rem;
+}
+
+.thread-replies .row {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px double #DEE2E6;
+}
+
+/*返信ボタン・モーダル*/
+.reply {
   >.btn:hover {
     background-color: #CCE5FF;
     color: #65B2FF;
@@ -322,11 +336,26 @@ textarea {
     }
   }
 
+  .reply_to .dreampost-content {
+    font-size: 1.2rem;
+  }
+
   .fa-image {
     color: #424242
   }
 }
 
+/*返信・返信スレッドの縦棒*/
+.thread-reply-to .vertical-line,
+.reply_to .vertical-line {
+  width: 2px;
+  background-color: rgb(204, 214, 221);  
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*いいねボタン*/
 .like {
   form {
     display: inline-block;

@@ -1,35 +1,12 @@
+<!-- 返信先なし -->
 <% if dreampost.in_reply_to == 0 %>
-<span class="normal-thread">
-  <a href="#" data-toggle="modal" data-target="#normal-thread-<%= dreampost.id %>" , class="stretched-link">
-  </a>
-  <div class="modal" id="normal-thread-<%= dreampost.id %>" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="modal-title" id="exampleModalLabel">
-          </p>
-          <button type="button" class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <section class="thread-reply-from">
-            <%= render 'dreamposts/detail', dreampost: dreampost %>
-          </section>
-        </div>
-      </div>
-    </div>
-  </div>
-</span>
+<%= render 'dreamposts/normal_thread', dreampost: dreampost %>
+<!-- 返信先ありだが削除 -->
 <% elsif Dreampost.find_by(id: dreampost.in_reply_to).nil? %>
-  <span>(返信先の投稿は削除されています)</span>
-  <br>
-<% else %>
-<span>
-  返信先:
-  <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
-                    Dreampost.find_by(id: dreampost.in_reply_to).user, class: 'z-2' %>
-  <%= render 'dreamposts/reply_thread', dreampost: dreampost %>
-</span>
+<span>(返信先の投稿は削除されています)</span>
 <br>
+<%= render 'dreamposts/normal_thread', dreampost: dreampost %>
+<!-- 返信先あり -->
+<% else %>
+<%= render 'dreamposts/reply_thread', dreampost: dreampost %>
 <% end %>

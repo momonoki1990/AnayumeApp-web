@@ -1,6 +1,7 @@
     <div class="row">
       <div class="col-2 pt-1 pr-0">
         <%= render 'shared/user_img', user: dreampost.user %>
+        <div class="vertical-line"></div>
       </div>
       <div class="col-10">
         <div class="post-info">
@@ -13,7 +14,7 @@
             </span>            
           </div>
         </div>
-        <span class="mb-0"><%= dreampost.content %></span>
+        <span class="mb-0 dreampost-content"><%= dreampost.content %></span>
         <p class="post-img"><%= image_tag dreampost.picture.url, class: 'mb-3' if dreampost.picture? %></p>
       </div>
     </div>

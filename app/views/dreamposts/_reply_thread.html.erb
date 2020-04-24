@@ -1,47 +1,64 @@
-<span class="reply-thread">
-  <a href="#" data-toggle="modal" data-target="#reply-thread-<%= dreampost.id %>" , class="stretched-link">
-    スレッドを表示
-  </a>
-  <div class="modal" id="reply-thread-<%= dreampost.id %>" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="modal-title" id="exampleModalLabel">
-          </p>
-          <button type="button" class="close" data-dismiss="modal">
-            <span>&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <section class="thread-reply-to">
-            <div class="row">
-              <div class="col-2 pt-1 pr-0">
-                <%= render 'shared/user_img', user: Dreampost.find_by(id: dreampost.in_reply_to).user %>
-              </div>
-              <div class="col-10">
-                <div class="post-info">
-                  <div>
-                    <span class="user">
-                      <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
-                      Dreampost.find_by(id: dreampost.in_reply_to).user %>
-                    </span>
-                    <span class="timestamp">
-                      <%= time_ago_in_words(dreampost.created_at) %>
-                    </span>
-                  </div>
+<span>
+  返信先:
+  <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
+                    Dreampost.find_by(id: dreampost.in_reply_to).user, class: 'z-2' %>
+  <span class="reply-thread">
+    <a href="#" data-toggle="modal" data-target="#reply-thread-<%= dreampost.id %>" , class="stretched-link">
+      スレッドを表示
+    </a>
+    <!-- モーダル -->
+    <div class="modal" id="reply-thread-<%= dreampost.id %>" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p class="modal-title" id="exampleModalLabel">
+            </p>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- 返信先 -->
+            <section class="thread-reply-to">
+              <div class="row">
+                <div class="col-2 pt-1 pr-0">
+                  <%= render 'shared/user_img', user: Dreampost.find_by(id: dreampost.in_reply_to).user %>
+                  <div class="vertical-line"></div>
                 </div>
-                <span class="mb-0"><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></span>
-                　 <p class="post-img mb-3">
-                  <%= image_tag Dreampost.find_by(id: dreampost.in_reply_to).picture.url if Dreampost.find_by(id: dreampost.in_reply_to).picture? %>
-                </p>
+                <div class="col-10">
+                  <div class="post-info">
+                    <div>
+                      <span class="user">
+                        <%= link_to Dreampost.find_by(id: dreampost.in_reply_to).user.name,
+                      Dreampost.find_by(id: dreampost.in_reply_to).user %>
+                      </span>
+                      <span class="timestamp">
+                        <%= time_ago_in_words(dreampost.created_at) %>
+                      </span>
+                    </div>
+                  </div>
+                  <span
+                    class="mb-0 dreampost-content"><%= Dreampost.find_by(id: dreampost.in_reply_to).content %></span>
+                  　 <p class="post-img mb-3">
+                    <%= image_tag Dreampost.find_by(id: dreampost.in_reply_to).picture.url if Dreampost.find_by(id: dreampost.in_reply_to).picture? %>
+                  </p>
+                </div>
               </div>
-            </div>
-          </section>
-          <section class="thread-reply-from">
-            <%= render 'dreamposts/detail', dreampost: dreampost %>
-          </section>
+            </section>
+            <!-- 投稿 -->
+            <section class="thread-reply-from mt-3">
+              <%= render 'dreamposts/detail', dreampost: dreampost %>
+            </section>
+            <!-- 投稿に対する返信 -->
+            <section class="thread-replies">
+              <% Dreampost.where(in_reply_to: dreampost.id).reverse.each do |i|  %>
+              <%= render 'dreamposts/detail', dreampost: i %>
+              <% end %>
+            </section>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </span>
 </span>
+<br>

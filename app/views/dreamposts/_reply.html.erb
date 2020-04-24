@@ -3,6 +3,8 @@
     data-target="#reply-modal-<%= dreampost.id %>">
     <i class="far fa-comment"></i>
   </button>
+  <span class="pl-0"><%= Dreampost.where(in_reply_to: dreampost.id).count %></span>
+  <!-- モーダル -->
   <div class="modal" id="reply-modal-<%= dreampost.id %>" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -14,10 +16,12 @@
           </button>
         </div>
         <div class="modal-body">
+          <!-- 返信先 -->
           <section class="reply_to">
             <%= render 'dreamposts/detail', dreampost: dreampost %>
           </section>
-          <section class="reply-from">
+          <!-- 返信フォーム -->
+          <section class="reply-from mt-3">
             <%= render 'dreamposts/reply_from', dreampost: dreampost %>
           </section>
         </div>

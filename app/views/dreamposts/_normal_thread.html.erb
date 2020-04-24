@@ -1,0 +1,30 @@
+<span class="normal-thread">
+  <a href="#" data-toggle="modal" data-target="#normal-thread-<%= dreampost.id %>" , class="stretched-link">
+  </a>
+  <!-- モーダル -->
+  <div class="modal" id="normal-thread-<%= dreampost.id %>" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-title" id="exampleModalLabel">
+          </p>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- 投稿 -->
+          <section class="thread-reply-from">
+            <%= render 'dreamposts/detail', dreampost: dreampost %>
+          </section>
+          <!-- 投稿に対する返信 -->
+          <section class="thread-replies">
+            <% Dreampost.where(in_reply_to: dreampost.id).each do |i|  %>
+            <%= render 'dreamposts/detail', dreampost: i %>
+            <% end %>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</span>
