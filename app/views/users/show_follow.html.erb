@@ -1,4 +1,4 @@
-<div class="container text-white show-follow">
+<div class="container show-follow">
   <div class="row">
     <div class="col-md-6">
       <div class="sticky">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="col-md-6 mt">
-      <h4><%= @title %></h4>
+      <h3><%= @title %></h3>
       <% if @users.any? %>
       <div class="show-follows jscroll">
         <%= render @users %>

@@ -1,7 +1,9 @@
 <header>
-  <nav class="navbar navbar-dark">
+  <nav class="navbar navbar-light">
     <div class="container">
-      <%= link_to "AnayumeApp", root_path, class: "navbar-brand" %>
+      <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'baloon.png', class: "logo-img" %>AnayumeApp
+      <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -15,7 +17,7 @@
             <%= link_to "\uf57e 夢の場所", maps_path, class: "nav-link fa" %>
           </li>
           <li class="nav-item">
-            <%= link_to "\uf0c0 皆様", users_path, class: "nav-link fa" %>
+            <%= link_to "\uf0c0 ユーザー一覧", users_path, class: "nav-link fa" %>
           </li>
           <li class="nav-item">
             <%= link_to "\uf2f5 ログアウト", logout_path, method: :delete, class: "nav-link fa" %>

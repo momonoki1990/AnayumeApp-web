@@ -14,12 +14,12 @@
             <% if current_user.following?(user) %>
             <%= form_for(current_user.active_relationships.find_by(followed_id: user.id),
                   html: { method: :delete }) do |f| %>
-            <%= f.submit "フォロー解除", class: "btn btn-secondary mt-0" %>
+            <%= f.submit "フォロー解除", class: "btn btn-secondary mt-0 mb-1" %>
             <% end %>
             <% else %>
             <%= form_for(current_user.active_relationships.build) do |f| %>
             <span><%= hidden_field_tag :followed_id, user.id %></span>
-            <%= f.submit "フォロー", class: "btn btn-primary mt-0" %>
+            <%= f.submit "フォロー", class: "btn btn-yellow mt-0 mb-1" %>
             <% end %>
             <% end %>
             <% end %>

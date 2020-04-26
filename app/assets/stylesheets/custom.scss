@@ -20,8 +20,9 @@
   @include box-sizing;
 }
 
-body {
-  background-image: url(bg.jpg);
+body {  
+  background-color: #bae8e8;  
+  color: #272343;
   font-family: Arial,
     "ヒラギノ角ゴ Pro W3",
     "Hiragino Kaku Gothic Pro",
@@ -31,62 +32,93 @@ body {
     "ＭＳ Ｐゴシック",
     "MS PGothic",
     sans-serif;
+    font-size: 1.1rem;
+}
+
+.modal {
+  color: #272343;
+}
+
+/*リンク*/
+a {
+  color: #272343;
+}
+
+h1, h2, h3, .lead {
+  font-weight: 900;
+}
+
+.lead {
+  font-weight: 900;
 }
 
 /*ヘッダー*/
 header {
-  .navbar-brand {
-    color: #fff;
-    font-style: italic;
-    font-size: 1.8rem;
+  .logo-img {
+    width: 3rem;
   }
 
-  .navbar-toggler {
-    border-color: #fff;
+  .navbar-brand {
+    color: rgba(39, 35, 67, 0.9) !important;
+    font-style: italic;
+    font-size: 1.8rem;
+
+  }
+
+  .navbar-toggler {    
+    border-color: rgba(39, 35, 67, 0.1) !important;
   }
 
   .navbar-toggler-icon {
-    color: #fff;
+    /*color: #272343;*/
   }
 
   .navbar-nav {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    
+    .nav-link {
+      color: rgba(39, 35, 67, 0.5)!important;
+    }
   }
 }
 
 /*ボタン*/
-.btn {
-  border-radius: 1rem !important;
+.btn-yellow {
+  background-color: #ffd803;
+  color: #272343;
+  border: none;
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10rem;
 }
 
-.transparent_blue {
-  background-color: rgba(0, 105, 217, 0.6);
-  border: #0069d9 1px solid;
+.btn-yellow:hover {
+  background-color: #ff7a35;
+  color: #272343;
+  border: none;  
+  transition-duration: 0.1s;  
 }
 
-.transparent_blue:hover {
-  background-color: rgba(0, 105, 217, 1)
+.btn-yellow:active,
+.btn-yellow:focus {
+  background-color: #ff7a35!important;
+  color: #272343!important;
+  border: none;
+  box-shadow: 0 0 0 0.2rem rgba(255, 90, 3, 0.5);
 }
 
-.transparent_green {
-  background-color: rgba(0, 0, 0, 0);
-  border: #28a745 1px solid;
-  color: #28a745;
+.btn-small {
+  height: 2.5rem;
+  line-height: 1.75rem;
 }
 
-.transparent_green:hover {
-  background-color: rgba(40, 167, 69, 0.6);
-  border: #28a745 1px solid;
-  color: #fff;
+.btn-long {
+  height: 2.75rem;
+  line-height: 2rem;
 }
 
-.transparent_gray {
-  background-color: rgba(108, 117, 125, 0.6);
-  border: #696969 1px solid;
-}
-
-.transparent_gray:hover {
-  background-color: rgba(108, 117, 125, 1)
+.btn-secondary {
+  box-shadow: 2px 2px 4px gray;
+  border-radius: 10rem;
 }
 
 .w-80 {
@@ -106,26 +138,18 @@ header {
   color: #E0395F;
 }
 
-.modal {
-  color: #000
-}
-
 .sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 60px;
 }
 
-.link-white {
-  color: #fff;
-}
-
-.link-white:hover {
-  color: #fff;
-}
-
 .fa-image {
   cursor: pointer;
+}
+
+.stats a {
+  font-size: 1.25rem;
 }
 
 /*ユーザー画像*/
@@ -196,7 +220,7 @@ header {
       font-weight: 900;
       content: '\f139';
       font-size: 50px;
-      color: #3fefee;
+      color: #272343;
     }
   }
 }
@@ -227,7 +251,7 @@ header {
 
 textarea {
   width: 100%;
-  height: calc(1.3rem * 4);
+  height: calc(1.3rem * 5);
   line-height: 1.3rem;
   border-radius: 0.2rem;
 }
@@ -247,7 +271,7 @@ textarea {
 }
 
 .fa-image {
-  color: #fff;
+  color: #272343;
   float: left;
 }
 
@@ -261,9 +285,13 @@ textarea {
 
 /*投稿一覧*/
 .card {
-  color: #000;
-  padding: 5px 10px;
+  background-color: #fffffe;
+  color: #272343;
+  padding: 10px 10px;
   margin-bottom: 5px;
+  border: 0px solid #272343;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 4px gray;
 
   .modal-header { 
     padding: 0.3rem 1rem;
@@ -328,7 +356,7 @@ textarea {
 
   .reply-from {
     .reply-form-blank {
-      border: 1px solid #000;
+      border: 1px solid #272343;
       height: calc(1.3rem * 4);
       line-height: 1.3rem;
       border-radius: 0.2rem;
@@ -376,7 +404,7 @@ nav.pagination {
 
 /*ログイン前home-left*/
 .message-area {
-  color: #ffffff;
+  color: #272343;
 
   h3 {
     white-space: nowrap;
@@ -387,8 +415,7 @@ nav.pagination {
 .dreampost-textarea {
   width: 100%;
   height: auto;
-  background-color: #fff;
-  color: #000;
+  color: #272343;
   border-radius: 0.2rem;
 
   textarea {
@@ -441,8 +468,7 @@ textarea.form-control {
 }
 
 /*フォロー・フォロワー一覧*/
-.post-info .follow-form .btn {
-  font-size: 0.75rem;
+.post-info .follow-form .btn {  
   padding: 0.25rem 0.75rem;
 }
 
@@ -516,12 +542,13 @@ textarea.form-control {
     text-align: center;
   }
 
-  .new_dreampost {
-    width: 100%;
+  header .navbar-brand {
+    font-size: 1.4rem;
   }
 
-  header .navbar-brand {
-    font-size: 1.5rem;
+  .new_dreampost {
+    width: 100%;
+    max-width: 100%;
   }
 
   /*homeページのアニメーション*/
