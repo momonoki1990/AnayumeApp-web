@@ -34,6 +34,10 @@ gem 'uglifier',                '3.2.0'
 
 group :development, :test do
   gem 'byebug', '9.0.6', platform: :mri
+  gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
 end
 
 group :development do

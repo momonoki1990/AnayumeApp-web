@@ -6,7 +6,7 @@ services:
       POSTGRES_DB: AnayumeAppDB_development
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD:
-      POSTGRES_HOST_AUTH_METHOD: trust      
+      POSTGRES_HOST_AUTH_METHOD: trust
     ports:
       - "3306:3306"
   web:
@@ -15,7 +15,7 @@ services:
       dockerfile: Dockerfile
     environment:
       GOOGLE_API_KEY: $GOOGLE_API_KEY
-    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: /bin/sh -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"    
     tty: true
     stdin_open: true
     depends_on:

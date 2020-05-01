@@ -47,8 +47,8 @@ jobs:
           command: bin/rails db:schema:load --trace
           
       - run:
-          name: rails test
-          command: bundle exec rake test
+          name: RSpec
+          command: bundle exec rspec
 
       # テストサマリー (https://circleci.com/docs/ja/2.0/collect-test-data/) に表示するテスト結果をアップロード
       - store_test_results: 
