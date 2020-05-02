@@ -20,7 +20,7 @@ jobs:
       # Bundler のバージョンを指定します
       - run:
           name: Bundler を指定
-          command: gem install bundler -v 2.1.4               
+          command: gem install bundler -v 2.1.4
 
       # バンドルキャッシュを復元
       - restore_cache:
