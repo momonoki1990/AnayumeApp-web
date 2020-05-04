@@ -24,5 +24,6 @@ production:
   database: AnayumeAppDB
   pool: 5
   username: <%= ENV["POSTGRESQL_USERNAME"] %>
-  password: <%= ENV["POSTGRESQL_PASSWORD"] %>  
+  password: <%= ENV["POSTGRESQL_PASSWORD"] %>
+  host: <%= ENV["POSTGRESQL_HOST"] %>
   port: 5432
