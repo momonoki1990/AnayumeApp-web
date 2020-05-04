@@ -12,7 +12,7 @@
 トップページのおためしログインをクリックすることで、ゲストアカウントとしてログインできます。
 
 ## 使用技術
-- Ruby 2.6.3, Rails 5.1.6
+- Ruby 2.6.3, Rails 5.2.4.2(5.1.6からバージョンアップ)
 - Sass,Bootstrap4,JQuery
 - Docker,Docker-compose
 - nginx,puma
