@@ -1,12 +1,12 @@
-<!-- 返信先なし -->
 <% if dreampost.in_reply_to == 0 %>
+<!-- 返信先なし -->
 <%= render 'dreamposts/normal_thread', dreampost: dreampost %>
-<!-- 返信先ありだが削除 -->
 <% elsif Dreampost.find_by(id: dreampost.in_reply_to).nil? %>
+<!-- 返信先ありだが削除 -->
 <span>(返信先の投稿は削除されています)</span>
 <br>
 <%= render 'dreamposts/normal_thread', dreampost: dreampost %>
-<!-- 返信先あり -->
 <% else %>
+<!-- 返信先あり -->
 <%= render 'dreamposts/reply_thread', dreampost: dreampost %>
 <% end %>
