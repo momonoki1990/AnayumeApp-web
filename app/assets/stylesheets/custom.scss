@@ -230,6 +230,12 @@ header {
   text-align: center;
 }
 
+.alert-info {
+  color: #505000;
+  background-color: #ffff9e;
+  border-color: #ffff84;
+}
+
 /*エラーメッセージ*/
 #error_explanation {
   .alert-danger {
