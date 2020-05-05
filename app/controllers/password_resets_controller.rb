@@ -24,7 +24,7 @@ class PasswordResetsController < ApplicationController
 
   def update
     if params[:user][:password].empty?
-      @user.errors.add(:password, :blank)
+      flash.now[:danger] = "パスワードを入力してください。"
       render 'edit'
     elsif @user.update_attributes(user_params)
       log_in @user
