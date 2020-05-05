@@ -1,18 +1,21 @@
-<h1 class="text-center">パスワードを忘れた</h1>
-<div class="row">
-  <div class="mx-auto">
-    <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
+<div class="container password_reset_form">
+  <h2 class="text-center">パスワードの再設定</h2>
+  <div class="row">
+    <div class="mx-auto w-75">
+      <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
 
-    <%= hidden_field_tag :email, @user.email %>
+      <%= hidden_field_tag :email, @user.email %>
 
-    <%= f.label :password, "パスワード" %>
-    <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password, "パスワード", class: 'mt-3' %>
+      <%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.label :password_confirmation, "パスワード(確認)" %>
-    <%= f.password_field :password_field, class: 'form-control' %>
+      <%= f.label :password_confirmation, "パスワード(確認)", class: 'mt-2' %>
+      <%= f.password_field :password_field, class: 'form-control' %>
 
-    <%= f.submit "パスワードを更新する", class: "btn btn-primary" %>
-    <% end %>
+      <%= f.submit "送信", class: "btn btn-yellow btn-small btn-small btn-small btn-small btn-small btn-small mt-2 float-right" %>
+      <% end %>
+      <div class="clear"></div>
+    </div>
   </div>
 </div>
