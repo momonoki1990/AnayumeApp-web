@@ -17,7 +17,7 @@
 - Docker,Docker-compose
 - nginx,puma
 - AWS (VPC,EC2,RDS for PostgreSQL,S3,Route53,ACM,ALB)
-- Circle CI
+- Circle CI(CI/CD), Capistrano
 - git, Github
 - Google Maps API
 
@@ -32,3 +32,7 @@
 - ユーザー一覧、フォローフォロワー一覧
 - 検索機能(投稿)
 - 地図検索、リスト保存機能
+
+## インフラ構成図
+![スクリーンショット 2020-04-04 16 48 25](https://user-images.githubusercontent.com/35623368/81460159-7c283b00-91de-11ea-93aa-2c13048a9202.png)
+
