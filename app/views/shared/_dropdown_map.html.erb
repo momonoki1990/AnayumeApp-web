@@ -3,7 +3,7 @@
     <i class="fas fa-chevron-down"></i>
   </button>
   <div class="dropdown-menu dropdown-menu-right">
-    <%= link_to "投稿する", dreamposts_path(dreampost: { user_id: current_user, content: object.title + object.comment }), class: 'dropdown-item', method: :post %>
+    <%= link_to "投稿する", dreamposts_path(dreampost: { user_id: current_user, content: object.title + "\n" + object.comment }), class: 'dropdown-item', method: :post %>
     <%= link_to "削除する", object, class: 'dropdown-item', method: :delete,
                                         data: { confirm: "削除してよろしいですか？" } %>
   </div>

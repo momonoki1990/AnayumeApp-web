@@ -20,7 +20,7 @@
       <div class="card-body">
         <div class="card-text">
           <%= render 'dreamposts/thread', dreampost: dreampost %>
-          <span><%= dreampost.content %></span>
+          <span><%= simple_format(dreampost.content) %></span>
         </div>
       </div>
       <p class="post-img">
