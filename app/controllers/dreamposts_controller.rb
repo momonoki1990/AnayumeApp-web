@@ -10,6 +10,7 @@ class DreampostsController < ApplicationController
     @dreampost = current_user.dreamposts.build(dreampost_params)
     @user = current_user
     if @dreampost.save
+      debugger
       redirect_to root_url
     else
       @feed_items = current_user.feed.page(params[:page]).per(10)
