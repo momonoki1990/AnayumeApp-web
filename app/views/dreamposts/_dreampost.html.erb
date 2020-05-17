@@ -27,10 +27,7 @@
         <%= image_tag dreampost.picture.url if dreampost.picture? %>
       </p>
       <% if dreampost.address? %>
-      <div id="gmap" class="gmap"></div>
-      <%= hidden_field_tag :dreampost_id, dreampost.id, {id: "dreampost-#{dreampost.id}"} %>
-      <%= hidden_field_tag :latitude, dreampost.latitude, {id: "latitude-#{dreampost.id}"} %>
-      <%= hidden_field_tag :longitude, dreampost.longitude, {id: "longitude-#{dreampost.id}" %>
+      <div id="gmap" class="gmap"></div>      
       <% end %>
       <%= render 'dreamposts/reply', dreampost: dreampost %>
       <%= render 'likes/like', dreampost: dreampost %>
@@ -46,8 +43,8 @@
   let map
   let geocoder
   let marker
-  let latitude = $('#latitude').val();
-  let longitude = $('#longitude').val();
+  let latitude = 35.681;
+  let longitude = 139.767;
 
   //地図のデフォルト位置
   function initMap() {
