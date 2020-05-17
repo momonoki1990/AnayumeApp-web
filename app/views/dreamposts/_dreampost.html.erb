@@ -26,8 +26,51 @@
       <p class="post-img">
         <%= image_tag dreampost.picture.url if dreampost.picture? %>
       </p>
+      <% if dreampost.address? %>
+      <div id="gmap" class="gmap"></div>
+      <%= hidden_field_tag :dreampost_id, dreampost.id, {id: "dreampost-#{dreampost.id}"} %>
+      <%= hidden_field_tag :latitude, dreampost.latitude, {id: "latitude-#{dreampost.id}"} %>
+      <%= hidden_field_tag :longitude, dreampost.longitude, {id: "longitude-#{dreampost.id}" %>
+      <% end %>
       <%= render 'dreamposts/reply', dreampost: dreampost %>
       <%= render 'likes/like', dreampost: dreampost %>
     </div>
   </div>
 </div>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_api_key %>&callback=initMap"
+  async defer></script>
+
+<script>
+  let map
+  let geocoder
+  let marker
+  let latitude = $('#latitude').val();
+  let longitude = $('#longitude').val();
+
+  //地図のデフォルト位置
+  function initMap() {
+    geocoder = new google.maps.Geocoder()    
+    mapInstance = new google.maps.Map(document.getElementById('gmap'), {
+      center: {
+        lat: latitude,
+        lng: longitude
+      },
+      zoom: 2
+    });
+
+    pos = new google.maps.LatLng(
+    35.681, //latitude
+    139.767 //longitude
+    );
+    marker = new google.maps.Marker({
+    map: mapInstance,
+    position: pos,
+    icon: {
+    url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
+    scaledSize: new google.maps.Size(40, 40) //サイズ
+    }
+    });
+  }
+</script>
