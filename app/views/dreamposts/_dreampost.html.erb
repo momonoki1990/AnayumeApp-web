@@ -27,7 +27,7 @@
         <%= image_tag dreampost.picture.url if dreampost.picture? %>
       </p>
       <% if dreampost.address? %>
-      <div id="gmap" class="gmap"></div>      
+      <div id="gmap_<%= dreampost.id %>" class="gmap"></div>      
       <% end %>
       <%= render 'dreamposts/reply', dreampost: dreampost %>
       <%= render 'likes/like', dreampost: dreampost %>
@@ -40,34 +40,15 @@
   async defer></script>
 
 <script>
-  let map
-  let geocoder
-  let marker
-  let latitude = 35.681;
-  let longitude = 139.767;
-
   //地図のデフォルト位置
   function initMap() {
-    geocoder = new google.maps.Geocoder()    
-    mapInstance = new google.maps.Map(document.getElementById('gmap'), {
+    geocoder = new google.maps.Geocoder()
+    mapInstance = new google.maps.Map(document.getElementById(`gmap_${<%= dreampost.id %>}`), {
       center: {
-        lat: latitude,
-        lng: longitude
+        lat: <%= dreampost.latitude %>,
+        lng: <%= dreampost.longitude %>
       },
       zoom: 2
-    });
-
-    pos = new google.maps.LatLng(
-    35.681, //latitude
-    139.767 //longitude
-    );
-    marker = new google.maps.Marker({
-    map: mapInstance,
-    position: pos,
-    icon: {
-    url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
-    scaledSize: new google.maps.Size(40, 40) //サイズ
-    }
     });
   }
 </script>
