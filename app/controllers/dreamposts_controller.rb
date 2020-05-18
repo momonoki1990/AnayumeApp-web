@@ -34,7 +34,7 @@ class DreampostsController < ApplicationController
   private
 
   def dreampost_params
-    params.require(:dreampost).permit(:content, :picture, :in_reply_to)
+    params.require(:dreampost).permit(:content, :picture, :in_reply_to, :address, :latitude, :longitude)
   end
 
   def correct_user
