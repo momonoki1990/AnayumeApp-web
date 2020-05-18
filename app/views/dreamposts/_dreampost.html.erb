@@ -34,21 +34,3 @@
     </div>
   </div>
 </div>
-
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_api_key %>&callback=initMap"
-  async defer></script>
-
-<script>
-  //地図のデフォルト位置
-  function initMap() {
-    geocoder = new google.maps.Geocoder()
-    mapInstance = new google.maps.Map(document.getElementById(`gmap_${<%= dreampost.id %>}`), {
-      center: {
-        lat: <%= dreampost.latitude %>,
-        lng: <%= dreampost.longitude %>
-      },
-      zoom: 2
-    });
-  }
-</script>
