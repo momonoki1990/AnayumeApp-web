@@ -30,3 +30,6 @@
 
 # docker環境変数
 /.env
+
+# vendor/bundle
+/vendor/bundle/ruby/2.6.0
