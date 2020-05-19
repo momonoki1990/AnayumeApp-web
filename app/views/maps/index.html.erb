@@ -130,7 +130,7 @@ zoom: 2
 //地図検索機能
 function codeAddress(){
 // 入力を取得
-let inputAddress = document.getElementById('address').value;
+const inputAddress = document.getElementById('address').value;
 
 // geocodingしたあとmapを移動
 geocoder.geocode( { 'address': inputAddress}, function(results, status) {

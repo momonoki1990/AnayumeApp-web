@@ -4,7 +4,7 @@ class MapsController < ApplicationController
   
   def index
     @map = Map.new
-    @maps = current_user.map_list
+    @maps = current_user.maps
     @maps_paginate = @maps.page(params[:page]).per(10)
   end
 
