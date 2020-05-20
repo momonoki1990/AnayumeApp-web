@@ -1,50 +1,50 @@
 <div class="container map">
-<h2 class="text-center">夢の場所</h2>
-<p class="text-center">
-  行ってみたい場所・夢を実現したい場所を<br class="brsp">リストとして登録しましょう!!
-</p>
+  <h2 class="text-center">夢の場所</h2>
+  <p class="text-center">
+    行ってみたい場所・夢を実現したい場所を<br class="brsp">リストとして登録しましょう!!
+  </p>
   <div class="row">
     <div class="col-lg-3 mt-3">
-    <div class="sticky">   
-      <input id="address" class="form-control" type="textbox" placeholder="場所を検索する">
-      <input type="button" value="検索" onclick="codeAddress()" class="float-right btn btn-yellow btn-small mt-1">
-      <div class="clear"></div>
-      <%= form_for @map do |f| %>      
-      <input type="hidden" name="map[address]" id="hidden_address">
-      <%= f.label :title, "タイトル" %>
-      <%= f.text_field :title, class: 'form-control', id: 'title' %>
-      <%= f.label :comment, "コメント", class: 'mt-3' %>
-      <%= f.text_field :comment, class: 'form-control' %>
-      <div id="result" class="map-image text-center"></div>
-      <div class="space-between mt-1">
-      <span class="picture">
-        <label for="map_picture">
-          <i class="far fa-image"></i>
-        </label>
-        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-      </span>
-      <%= f.submit "保存", class: "btn btn-yellow btn-small" %>
-      </div>      
-      <% end %>
+      <div class="sticky">
+        <input id="address" class="form-control" type="textbox" placeholder="場所を検索する">
+        <input type="button" value="検索" onclick="codeAddress()" class="float-right btn btn-yellow btn-small mt-1">
+        <div class="clear"></div>
+        <%= form_for @map do |f| %>
+        <input type="hidden" name="map[address]" id="hidden_address">
+        <%= f.label :title, "タイトル" %>
+        <%= f.text_field :title, class: 'form-control', id: 'title' %>
+        <%= f.label :comment, "コメント", class: 'mt-3' %>
+        <%= f.text_field :comment, class: 'form-control' %>
+        <div id="result" class="map-image text-center"></div>
+        <div class="space-between mt-1">
+          <span class="picture">
+            <label for="map_picture">
+              <i class="far fa-image"></i>
+            </label>
+            <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+          </span>
+          <%= f.submit "保存", class: "btn btn-yellow btn-small" %>
+        </div>
+        <% end %>
       </div>
     </div>
     <div class="col-lg-6 mt-3">
       <div class="sticky">
-      <div id="gmap" class="gmap">
-      </div>
+        <div id="gmap" class="gmap">
+        </div>
       </div>
     </div>
     <div class="col-lg-3 mt-3">
       <div class="maps jscroll">
-      <%= render @maps %>
-      </div>
+        <%= render @maps %>
       </div>
     </div>
   </div>
 </div>
-<script src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_api_key %>&callback=initMap"
-  async
-  defer></script>
+</div>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.secrets.google_api_key %>&callback=initMap"
+  async defer></script>
 
 <!--ファイルサイズの監視と警告-->
 <script type="text/javascript">
@@ -73,95 +73,95 @@
 </script>
 
 <script>
-let map
-let geocoder
-let marker
+  let map
+  let geocoder
+  let marker
 
-//地図のデフォルト位置
-function initMap() {
-geocoder = new google.maps.Geocoder()
-mapInstance = new google.maps.Map(document.getElementById('gmap'), {
-center: {
-lat: 35.681,
-lng: 139.767
-},
-zoom: 2
-});
+  //地図のデフォルト位置
+  function initMap() {
+    geocoder = new google.maps.Geocoder()
+    mapInstance = new google.maps.Map(document.getElementById('gmap'), {
+      center: {
+        lat: 35.681,
+        lng: 139.767
+      },
+      zoom: 2
+    });
 
-//保存された地図情報からピンをさす
-<% @maps.each do |map| %>
-  pos = new google.maps.LatLng(
-  <%=map.latitude%>, //latitude
-  <%=map.longitude%> //longitude
-);
-  default_marker = new google.maps.Marker({
-  map: mapInstance,
-  position: pos,
-  icon: {
-  url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
-  scaledSize: new google.maps.Size(40, 40) //サイズ
+    //保存された地図情報からピンをさす
+    <% @maps.each do |map | %>
+        pos = new google.maps.LatLng( 
+          <%= map.latitude %>, //latitude
+          <%= map.longitude %> //longitude
+        );
+      default_marker = new google.maps.Marker({
+        map: mapInstance,
+        position: pos,
+        icon: {
+          url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
+          scaledSize: new google.maps.Size(40, 40) //サイズ
+        }
+      });
+
+    //地図上のピンの吹き出し
+    (function (a) {
+      var infoboxContent = document.createElement('div');
+      // infobox に表示するHTML
+      infoboxContent.innerHTML =
+        '<div style="color: black;"><%=map.title%></div>' +
+        '<div style="color: black;"><%=map.comment%></div>'
+        <% if map.picture.present? %>
+        +
+        '<img src="<%= map.picture.url %>">'
+        <% end %>
+        ;
+      var infoWindow = new google.maps.InfoWindow({
+        content: infoboxContent,
+        maxWidth: 250
+      });
+      a.addListener('click', function () {
+        infoWindow.open(mapInstance, a);
+      });
+    }(default_marker));
+
+    <% end %>
   }
-});
 
-//地図上のピンの吹き出し
-(function(a){
-  var infoboxContent = document.createElement('div');
-  // infobox に表示するHTML
-  infoboxContent.innerHTML =
-  '<div style="color: black;"><%=map.title%></div>' +
-  '<div style="color: black;"><%=map.comment%></div>'
-  <% if map.picture.present? %>
-  +
-  '<img src="<%= map.picture.url %>">'
-  <% end %>
-  ;
-  var infoWindow = new google.maps.InfoWindow({
-  content: infoboxContent,
-  maxWidth: 250
-  });
-  a.addListener('click', function() {
-  infoWindow.open(mapInstance, a);
-});
-}(default_marker));
+  //地図検索機能
+  function codeAddress() {
+    // 入力を取得
+    const inputAddress = document.getElementById('address').value;
 
-<% end %>
-}
+    // geocodingしたあとmapを移動
+    geocoder.geocode({
+      'address': inputAddress
+    }, function (results, status) {
+      if (status == 'OK') {
+        // map.setCenterで地図が移動
+        mapInstance.setCenter(results[0].geometry.location);
 
-//地図検索機能
-function codeAddress(){
-// 入力を取得
-const inputAddress = document.getElementById('address').value;
+        // 既存の検索マーカーを削除
+        if (marker != null) {
+          marker.setMap(null);
+        }
+        marker = null;
 
-// geocodingしたあとmapを移動
-geocoder.geocode( { 'address': inputAddress}, function(results, status) {
-if (status == 'OK') {
-// map.setCenterで地図が移動
-mapInstance.setCenter(results[0].geometry.location);
+        // google.maps.MarkerでGoogleMap上の指定位置にマーカが立つ
+        marker = new google.maps.Marker({
+          map: mapInstance,
+          position: results[0].geometry.location
+        });
 
-// 既存の検索マーカーを削除
-if(marker != null){
-marker.setMap(null);
-}
-marker = null;
+        // タイトルフォームにデフォルト値として検索値を設定
+        let title = document.getElementById('title');
+        title.setAttribute("value", inputAddress);
 
-// google.maps.MarkerでGoogleMap上の指定位置にマーカが立つ
-marker = new google.maps.Marker({
-map: mapInstance,
-position: results[0].geometry.location
-});
+        let hidden_address = document.getElementById('hidden_address');
+        hidden_address.setAttribute("value", inputAddress);
 
-// タイトルフォームにデフォルト値として検索値を設定
-let title = document.getElementById('title');
-title.setAttribute("value", inputAddress );
-
-let hidden_address = document.getElementById('hidden_address');
-hidden_address.setAttribute("value", inputAddress);
-
-} else {
-alert('地名や住所を入力してください。');
-}
-});
-}
-
+      } else {
+        alert('地名や住所を入力してください。');
+      }
+    });
+  }
 </script>
-
