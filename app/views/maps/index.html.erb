@@ -90,10 +90,10 @@
 
     //保存された地図情報からピンをさす
     <% @maps.each do |map | %>
-        pos = new google.maps.LatLng( 
-          <%= map.latitude %>, //latitude
-          <%= map.longitude %> //longitude
-        );
+      pos = new google.maps.LatLng( 
+        <%= map.latitude %>, //latitude
+        <%= map.longitude %> //longitude
+      );
       default_marker = new google.maps.Marker({
         map: mapInstance,
         position: pos,

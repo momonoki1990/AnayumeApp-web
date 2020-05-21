@@ -14,6 +14,7 @@ class MapsController < ApplicationController
     if @map.save
       redirect_to maps_url
     else
+      # ここ、mapsとしたいが、なぜかjavascriptでエラーが出てしまい、地図が表示されなくなる。
       @maps = current_user.map_list
       if @map.latitude.nil?
         flash.now[:danger] = "場所を検索してから保存ボタンを押してください。"
