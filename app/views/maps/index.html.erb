@@ -73,13 +73,11 @@
 </script>
 
 <script>
-  let map
   let geocoder
   let marker
 
-  //地図のデフォルト位置
+  // 地図のデフォルト位置
   function initMap() {
-    geocoder = new google.maps.Geocoder()
     mapInstance = new google.maps.Map(document.getElementById('gmap'), {
       center: {
         lat: 35.681,
@@ -88,22 +86,23 @@
       zoom: 2
     });
 
-    //保存された地図情報からピンをさす
+    // 保存された地図情報からピンをさす
     <% @maps.each do |map | %>
       pos = new google.maps.LatLng( 
-        <%= map.latitude %>, //latitude
-        <%= map.longitude %> //longitude
+        <%= map.latitude %>, // latitude
+        <%= map.longitude %> // longitude
       );
       default_marker = new google.maps.Marker({
         map: mapInstance,
         position: pos,
         icon: {
-          url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', //アイコンのURL
-          scaledSize: new google.maps.Size(40, 40) //サイズ
+          url: ' https://maps.google.com/mapfiles/ms/icons/green-dot.png', // アイコンのURL
+          scaledSize: new google.maps.Size(40, 40) // サイズ
         }
       });
 
-    //地図上のピンの吹き出し
+    // 地図上のピンの吹き出し
+    // 即時関数にしないと、どのマーカーをクリックしても同じinfoWinndow(最後に代入されたもの)が開かれてしまう
     (function (a) {
       var infoboxContent = document.createElement('div');
       // infobox に表示するHTML
@@ -119,7 +118,7 @@
         content: infoboxContent,
         maxWidth: 250
       });
-      a.addListener('click', function () {
+      a.addListener('click', () => {
         infoWindow.open(mapInstance, a);
       });
     }(default_marker));
@@ -127,15 +126,16 @@
     <% end %>
   }
 
-  //地図検索機能
+  // 地図検索機能
   function codeAddress() {
     // 入力を取得
     const inputAddress = document.getElementById('address').value;
 
     // geocodingしたあとmapを移動
+    geocoder = new google.maps.Geocoder()
     geocoder.geocode({
-      'address': inputAddress
-    }, function (results, status) {
+      address: inputAddress
+    }, (results, status) => {
       if (status == 'OK') {
         // map.setCenterで地図が移動
         mapInstance.setCenter(results[0].geometry.location);
@@ -144,7 +144,6 @@
         if (marker != null) {
           marker.setMap(null);
         }
-        marker = null;
 
         // google.maps.MarkerでGoogleMap上の指定位置にマーカが立つ
         marker = new google.maps.Marker({
