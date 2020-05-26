@@ -53,7 +53,7 @@ class PasswordResetsController < ApplicationController
   end
 
   def check_expiration
-    return unless  @user.password_reset_expired?
+    return unless @user.password_reset_expired?
 
     flash[:danger] = "パスワードリセットの有効期限が切れています。"
     redirect_to edit_password_reset_url
