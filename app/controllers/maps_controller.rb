@@ -16,11 +16,12 @@ class MapsController < ApplicationController
     else
       # ここ、mapsとしたいが、なぜかjavascriptでエラーが出てしまい、地図が表示されなくなる。
       @maps = current_user.map_list
-      if @map.latitude.nil?
-        flash.now[:danger] = "場所を検索してから保存ボタンを押してください。"
-      else
-        flash.now[:danger] = "もう一度場所を検索し、タイトルを入力してから保存ボタンを押してください。"
-      end
+      flash.now[:danger] =
+        if @map.latitude.nil?
+          "場所を検索してから保存ボタンを押してください。"
+        else
+          "もう一度場所を検索し、タイトルを入力してから保存ボタンを押してください。"
+        end
       render 'maps/index'
     end
   end
