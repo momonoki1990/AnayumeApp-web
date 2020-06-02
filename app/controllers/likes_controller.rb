@@ -15,7 +15,7 @@ class LikesController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy 
     @dreampost = Like.find(params[:id]).dreampost
     return unless @dreampost.like?(current_user)
 
