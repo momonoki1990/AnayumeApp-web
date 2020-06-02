@@ -7,12 +7,12 @@ class DreampostsController < ApplicationController
   def show; end
 
   def create
-    @dreampost = current_user.dreamposts.build(dreampost_params)
     @user = current_user
+    @dreampost = @user.dreamposts.build(dreampost_params)
     if @dreampost.save
       redirect_to root_url
     else
-      @feed_items = current_user.feed.page(params[:page]).per(10)
+      @feed_items = @user.feed.page(params[:page]).per(10)
       flash.now[:danger] = @dreampost.errors.full_messages.to_sentence
       render 'static_pages/home'
     end
