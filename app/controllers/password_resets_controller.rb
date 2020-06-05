@@ -8,8 +8,7 @@ class PasswordResetsController < ApplicationController
   def new; end
 
   def create
-    @user = User.find_by(email: params[:password_reset][:email].downcase)
-    if @user
+    if @user = User.find_by(email: params[:password_reset][:email].downcase)
       @user.create_reset_digest
       @user.send_password_reset_email
       flash[:info] = "ご入力いただいたアドレスにメールを送信いたしました。"
@@ -54,7 +53,7 @@ class PasswordResetsController < ApplicationController
 
   def check_expiration
     return unless @user.password_reset_expired?
-
+    
     flash[:danger] = "パスワードリセットの有効期限が切れています。"
     redirect_to edit_password_reset_url
   end
