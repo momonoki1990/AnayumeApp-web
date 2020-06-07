@@ -26,8 +26,7 @@ class Dreampost < ApplicationRecord
   class << self
     def search(search)
       return Dreampost.all unless search
-
-      # ここの処理要確認
+      
       Dreampost.where(['content LIKE ?', "%#{search}%"])
     end
   end
