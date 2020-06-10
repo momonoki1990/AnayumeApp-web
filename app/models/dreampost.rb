@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Dreampost < ApplicationRecord
   attr_accessor :search
   belongs_to :user
@@ -26,7 +24,7 @@ class Dreampost < ApplicationRecord
   class << self
     def search(search)
       return Dreampost.all unless search
-      
+
       Dreampost.where(['content LIKE ?', "%#{search}%"])
     end
   end
