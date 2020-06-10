@@ -55,7 +55,7 @@ class UsersController < ApplicationController
 
   def index
     if logged_in?
-      @user = User.find(params[:id])
+      @user = current_user
       @users = User.where.not(id: current_user.id).page(params[:page]).per(20)
       @dreampost = current_user.dreamposts.build if logged_in?
     else
