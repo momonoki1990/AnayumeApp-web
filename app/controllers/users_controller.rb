@@ -16,7 +16,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.picture = "default_user.jpg" # 恐らくこれだと正常にデフォルト画像が登録されていない。
     if @user.save
       @user.send_activation_email
       flash[:info] = "送信されたメールをご確認ください。"
@@ -41,23 +40,23 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = "フォロー中"
     @user = User.find(params[:id])
+    @title = "フォロー中"
     @users = @user.following.page(params[:page]).per(20)
     render "show_follow"
   end
 
   def followers
-    @title = "フォロワー"
     @user = User.find(params[:id])
+    @title = "フォロワー"
     @users = @user.followers.page(params[:page]).per(20)
     render "show_follow"
   end
 
   def index
     if logged_in?
-      @users = User.where.not(id: current_user.id).page(params[:page]).per(20)
       @user = current_user
+      @users = User.where.not(id: current_user.id).page(params[:page]).per(20)
       @dreampost = current_user.dreamposts.build if logged_in?
     else
       @users = User.all.page(params[:page]).per(20)
